@@ -1,8 +1,27 @@
 /*dans le terminal, lancer
-./dart-sass/sass SCSS/style.scss style.css --watch
+./dart-sass/sass SCSS/style.scss CSS/style.css --watch
 ca indique de lancer sass, se baser sur le fichier style scss, générer le fichier style css, et mettre a jour a chaque sauvegarde
 */
 
-.test {
-    background-color: green;
+/*
+Questions à poser
+Comment organiser les pages html ?Dossier ou non ? noms en durs ou non ?
+
+Importance des outils vus en cours ?
+c'est à dire ce qui est le plus utilisé en général
+BEM ?
+variables, mixin, extentions ?
+listes, maps ?
+fonctions ?
+Conditions, boucles ?
+
+Pour les imports, faut-il que je fasse 7 dossiers comme dans le cours ?
+
+Autoprefixer, utile ? (me semble lourd pour peu de resultats)
+
+*/
+
+.restaurant--picture { /* A modifier, c'est juste pour l'aperçu */
+    width: 200px;
+    height: 150px;
 }
