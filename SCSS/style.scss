@@ -21,7 +21,116 @@ Autoprefixer, utile ? (me semble lourd pour peu de resultats)
 
 */
 
+/*Section fonts*/
+@font-face
+{
+    font-family: 'Shrikhand';
+    src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
+    font-style:normal;
+}
+
+@font-face
+{
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+    font-style:normal;
+}
+
+@font-face
+{
+    font-family: 'RobotoLight';
+    src: url("../fonts/Roboto-Light.ttf") format("truetype");
+    font-style:normal;
+}
+
+/* Les variables */
+$taille-regular : 'Roboto';
+$espacement_petit : 10px;
+$espacement_moyen : 20px;
+$blanc : #fff;
+$gris-clair : rgb(234,234,234);
+$gris-sombre : rgb(53,53,53);
+
+/* Les mixin */
+@mixin font-logo()
+{
+    font-family: 'Shrikhand';
+}
+
+@mixin font-text($taille : $taille-regular)
+{
+    font-family: $taille;
+}
+
+/* Règle générale à toute la page */
+body {
+    margin : 0;
+    @include font-text();
+}
+
+.max-width-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 330px;
+}
+
+/*Header*/
+header {
+    @include font-logo();
+    display: flex;
+    justify-content: center;
+    h1 {
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Section sous le header avant les restaurants */
+
+.utilisateur--localisation {
+    display: flex;
+    justify-content: center;
+    background-color: $gris-clair;
+    padding-top: $espacement_moyen;
+    padding-bottom: $espacement_moyen;
+    box-shadow: 0 -5px 3px $gris-sombre;
+}
+
+.fa-map-marker-alt {
+    margin-right: 20px;
+}
+
+
+.Description_application {
+    @include font-text('RobotoLight');
+}
+
+button {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
 .restaurant--picture { /* A modifier, c'est juste pour l'aperçu */
     width: 200px;
     height: 150px;
+}
+
+/* footer */
+footer {
+    @include font-logo();
+    padding-left: 20px;
+    padding-top:10px;
+    padding-bottom: 2px;
+    color : $blanc;
+    background-color: $gris-sombre;
 }

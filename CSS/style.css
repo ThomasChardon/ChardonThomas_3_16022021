@@ -20,10 +20,84 @@ Pour les imports, faut-il que je fasse 7 dossiers comme dans le cours ?
 Autoprefixer, utile ? (me semble lourd pour peu de resultats)
 
 */
+/*Section fonts*/
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoLight";
+  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+}
+/* Les variables */
+/* Les mixin */
+/* Règle générale à toute la page */
+body {
+  margin: 0;
+  font-family: "Roboto";
+}
+
+.max-width-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 330px;
+}
+
+/*Header*/
+header {
+  font-family: "Shrikhand";
+  display: flex;
+  justify-content: center;
+}
+header h1 {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+/* Section sous le header avant les restaurants */
+.utilisateur--localisation {
+  display: flex;
+  justify-content: center;
+  background-color: #eaeaea;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0 -5px 3px #353535;
+}
+
+.fa-map-marker-alt {
+  margin-right: 20px;
+}
+
+.Description_application {
+  font-family: "RobotoLight";
+}
+
+button {
+  display: flex;
+  justify-content: center;
+}
+
 .restaurant--picture {
   /* A modifier, c'est juste pour l'aperçu */
   width: 200px;
   height: 150px;
+}
+
+/* footer */
+footer {
+  font-family: "Shrikhand";
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  color: #fff;
+  background-color: #353535;
 }
 
 /*# sourceMappingURL=style.css.map */
