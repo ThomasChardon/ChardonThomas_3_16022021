@@ -1,0 +1,51 @@
+les incohérences de spécificité entre différents sélecteurs créeront des bugs et des comportements imprévisibles ;
+
+utilisez les esperluettes pour un nesting efficace dans Sass sans froisser les principes BEM ; 
+
+utilisez le nesting et la spécificité pour créer un système de sélecteurs maintenable dans Sass.
+
+
+Les variables
+Les variables stockent des valeurs que vous pouvez réutiliser dans tout votre codebase.
+
+Pour définir une variable, tapez le signe dollar ($) puis le nom de la variable : $variable-name.  
+
+Quand vous modifiez la valeur de la variable, cela modifiera cette valeur partout où la variable a été utilisée.
+
+Les variables peuvent stocker tous les types de données de Sass : couleur, taille et listes de valeurs. 
+
+
+Les mixin
+
+déclaration
+@mixin heading-shado{
+  text-shadow: .55rem .55rem #15DEA5;
+}
+
+utilisation
+.form {
+  &__heading {
+      @include heading-shado;
+  }
+}
+
+déclaration avec arguments:
+@mixin heading-shadow($colour: $colour-primary){
+  text-shadow: .55rem .55rem $colour;
+}
+
+utilisation
+@include heading-shadow(red)
+@include heading-shadow()
+
+Les mixins sont très similaires aux variables, mais au lieu de ne stocker que des valeurs, ils stockent des blocs de code entiers.
+
+On utilise le mot clé @mixin pour déclarer une mixin.
+
+On utilise le mot clé @include pour placer une instance du mixin dans son code.
+
+Lorsque Sass compile les instances d’une mixin, il remplace le mixin par les règles qu’il contient.
+
+Pour rendre les mixins plus adaptables et réutilisables, vous pouvez inclure des arguments lorsque vous les déclarez.
+
+Les arguments peuvent changer l’effet du code compilé, par exemple définir des couleurs ou tailles customisées.

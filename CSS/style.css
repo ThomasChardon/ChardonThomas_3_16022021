@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/*dans le terminal, lancer
+./dart-sass/sass SCSS/style.scss style.css --watch
+ca indique de lancer sass, se baser sur le fichier style scss, générer le fichier style css, et mettre a jour a chaque sauvegarde
+*/
+.test {
+  background-color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
