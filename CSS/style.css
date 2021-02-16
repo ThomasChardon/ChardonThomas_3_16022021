@@ -4,7 +4,7 @@
 ca indique de lancer sass, se baser sur le fichier style scss, générer le fichier style css, et mettre a jour a chaque sauvegarde
 */
 .test {
-  background-color: red;
+  background-color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */
