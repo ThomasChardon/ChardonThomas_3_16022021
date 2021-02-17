@@ -65,10 +65,17 @@ $couleur-tertiaire : #99E2D0;
     font-family: $taille;
 }
 
-@mixin marges-auto()
+@mixin marges-auto($specification : auto)
 {
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: $specification;
+    margin-left: $specification;
+}
+
+@mixin flex_center($align-center : initial) /*Celle ci permet d'aligner automatiquement sur l'axe horizontal, avec vertical en option*/
+{
+    display: flex;
+    justify-content: center;
+    align-items: $align-center;
 }
 
 /* Règle générale à toute la page */
@@ -85,8 +92,7 @@ body {
 /*Header*/
 header {
     @include font-logo();
-    display: flex;
-    justify-content: center;
+    @include flex_center();
     h1 {
         margin-bottom: $espacement_petit;
         margin-top: $espacement_petit;
@@ -102,8 +108,7 @@ header {
 }
 
 .utilisateur--localisation {
-    display: flex;
-    justify-content: center;
+    @include flex_center();
     background-color: $gris-clair;
     padding-top: $espacement_moyen;
     padding-bottom: $espacement_moyen;
@@ -127,9 +132,7 @@ header {
 }
 
 button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex_center(center);
     border-radius: 20px;
     border: 0 $blanc solid;
     width: 200px;
@@ -139,14 +142,46 @@ button {
     box-shadow: 0 4px 4px darken($gris-clair, 10%);
 }
 
+/* deuxième div */
 
+.Application--fonctionnement {
+    margin-bottom: 70px;
+}
 
+.Fonctionnement--details {
+    @include flex_center(center);
+    background-color: darken($blanc, 3%);
+    box-shadow: 0 4px 4px darken($blanc, 10%);
+    border-radius: 30px;
+    margin-bottom: $espacement_moyen;
+    height: 80px;
+    .details_nombres {
+        position: relative;
+        left: -5px;
+        background-color: $couleur-primaire;
+        color: $blanc;
+        width: $espacement_moyen;
+        height: $espacement_moyen;
+        text-align: center;
+        align-content: center;
+        border-radius: 10px;
+        font-size: small;
+    }
+    .fas {
+        @include marges-auto(25px);
+        color: $couleur-primaire;
+    }
+    .details_phrases {
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
 
+/* liste des restaurants*/
 
-
-
-
-
+.Liste_restaurants {
+    background-color: $gris-clair;
+}
 
 
 .restaurant--picture { /* A modifier, c'est juste pour l'aperçu */
@@ -157,8 +192,8 @@ button {
 /* footer */
 footer {
     @include font-logo();
-    padding-left: 20px;
-    padding-top:10px;
+    padding-left: $espacement_moyen;
+    padding-top: $espacement_petit;
     padding-bottom: 2px;
     color : $blanc;
     background-color: $gris-sombre;

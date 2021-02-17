@@ -55,6 +55,7 @@ header {
   font-family: "Shrikhand";
   display: flex;
   justify-content: center;
+  align-items: initial;
 }
 header h1 {
   margin-bottom: 10px;
@@ -71,6 +72,7 @@ header h1 {
 .utilisateur--localisation {
   display: flex;
   justify-content: center;
+  align-items: initial;
   background-color: #eaeaea;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -104,6 +106,48 @@ button {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   color: #fff;
   box-shadow: 0 4px 4px #d1d1d1;
+}
+
+/* deuxième div */
+.Application--fonctionnement {
+  margin-bottom: 70px;
+}
+
+.Fonctionnement--details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 4px #e6e6e6;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  height: 80px;
+}
+.Fonctionnement--details .details_nombres {
+  position: relative;
+  left: -5px;
+  background-color: #9356DC;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  align-content: center;
+  border-radius: 10px;
+  font-size: small;
+}
+.Fonctionnement--details .fas {
+  margin-right: 25px;
+  margin-left: 25px;
+  color: #9356DC;
+}
+.Fonctionnement--details .details_phrases {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* liste des restaurants*/
+.Liste_restaurants {
+  background-color: #eaeaea;
 }
 
 .restaurant--picture {
