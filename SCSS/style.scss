@@ -50,6 +50,9 @@ $espacement_moyen : 20px;
 $blanc : #fff;
 $gris-clair : rgb(234,234,234);
 $gris-sombre : rgb(53,53,53);
+$couleur-primaire : #9356DC;
+$couleur-secondaire : #FF79DA;
+$couleur-tertiaire : #99E2D0;
 
 /* Les mixin */
 @mixin font-logo()
@@ -62,6 +65,12 @@ $gris-sombre : rgb(53,53,53);
     font-family: $taille;
 }
 
+@mixin marges-auto()
+{
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /* Règle générale à toute la page */
 body {
     margin : 0;
@@ -69,8 +78,7 @@ body {
 }
 
 .max-width-container {
-    margin-left: auto;
-    margin-right: auto;
+    @include marges-auto();
     max-width: 330px;
 }
 
@@ -80,12 +88,18 @@ header {
     display: flex;
     justify-content: center;
     h1 {
-        margin-bottom: 0;
-        margin-top: 10px;
+        margin-bottom: $espacement_petit;
+        margin-top: $espacement_petit;
     }
 }
 
 /* Section sous le header avant les restaurants */
+
+.bloc_sous_header {
+    background-color: darken($blanc, 3%);
+    padding-top: 1px;
+    padding-bottom: 40px;
+}
 
 .utilisateur--localisation {
     display: flex;
@@ -93,7 +107,7 @@ header {
     background-color: $gris-clair;
     padding-top: $espacement_moyen;
     padding-bottom: $espacement_moyen;
-    box-shadow: 0 -5px 3px $gris-sombre;
+    box-shadow: 0 -5px 3px darken($gris-clair, 10%);
 }
 
 .fa-map-marker-alt {
@@ -103,11 +117,26 @@ header {
 
 .Description_application {
     @include font-text('RobotoLight');
+    text-align : center;
+    padding-bottom: $espacement_moyen;
+    h2 {
+        @include font-text();
+        @include marges-auto();
+        width : 80% ;
+    }
 }
 
 button {
     display: flex;
     justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 0 $blanc solid;
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(to top left, $couleur-primaire, $couleur-secondaire);
+    color: $blanc;
+    box-shadow: 0 4px 4px darken($gris-clair, 10%);
 }
 
 
