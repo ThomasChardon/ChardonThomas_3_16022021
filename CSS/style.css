@@ -38,7 +38,7 @@ Autoprefixer, utile ? (me semble lourd pour peu de resultats)
 }
 /* Les variables */
 /* Les mixin */
-/* Règle générale à toute la page */
+/* Règle générale à toute les pages */
 body {
   margin: 0;
   font-family: "Roboto";
@@ -50,6 +50,20 @@ body {
   max-width: 330px;
 }
 
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 0 #fff solid;
+  width: 200px;
+  height: 40px;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  color: #fff;
+  box-shadow: 0 4px 4px #d1d1d1;
+}
+
+/*PAGE ACCUEIL*/
 /*Header*/
 header {
   font-family: "Shrikhand";
@@ -91,18 +105,6 @@ header h1 {
   margin-right: auto;
   margin-left: auto;
   width: 80%;
-}
-.bloc_sous_header button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  border: 0 #fff solid;
-  width: 200px;
-  height: 40px;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
-  color: #fff;
-  box-shadow: 0 4px 4px #d1d1d1;
 }
 
 /* deuxième div */
@@ -161,7 +163,6 @@ header h1 {
   margin-bottom: 20px;
 }
 .Liste_restaurants .restaurants .restaurant--picture {
-  /* A modifier, c'est juste pour l'aperçu */
   width: 100%;
   height: 150px;
   object-fit: cover;
@@ -194,5 +195,52 @@ footer {
   color: #fff;
   background-color: #353535;
 }
+
+/* PAGE RESTAURANT*/
+/*body*/
+.Menu_du_restaurant {
+  position: relative;
+  top: -50px;
+  background-color: #f7f7f7;
+  padding-top: 1px;
+  padding-bottom: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.Menu_du_restaurant h1 {
+  margin-left: 20px;
+  font-family: "Shrikhand";
+}
+.Menu_du_restaurant h1, .Menu_du_restaurant .fa-heart {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.section_des_menus h3 {
+  font-family: "RobotoLight";
+}
+
+.banniere_restaurant {
+  /*A modifier, juste pour tests*/
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/*
+TO DO list
+
+créer chaque restaurant
+
+Faire les liens accueil - restau, accueil-accueil ?
+
+Faire les media queries
+
+Faire les animations
+
+
+
+*/
 
 /*# sourceMappingURL=style.css.map */

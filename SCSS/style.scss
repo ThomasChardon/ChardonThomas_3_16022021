@@ -45,6 +45,7 @@ Autoprefixer, utile ? (me semble lourd pour peu de resultats)
 
 /* Les variables */
 $taille-regular : 'Roboto';
+$textefin : 'RobotoLight';
 $espacement_petit : 10px;
 $espacement_moyen : 20px;
 $blanc : #fff;
@@ -78,7 +79,7 @@ $couleur-tertiaire : #99E2D0;
     align-items: $align-center;
 }
 
-/* Règle générale à toute la page */
+/* Règle générale à toute les pages */
 body {
     margin : 0;
     @include font-text();
@@ -89,6 +90,18 @@ body {
     max-width: 330px;
 }
 
+button {
+    @include flex_center(center);
+    border-radius: 20px;
+    border: 0 $blanc solid;
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(to top left, $couleur-primaire, $couleur-secondaire);
+    color: $blanc;
+    box-shadow: 0 4px 4px darken($gris-clair, 10%);
+}
+
+/*PAGE ACCUEIL*/
 /*Header*/
 header {
     @include font-logo();
@@ -117,7 +130,7 @@ header {
     padding-top: 1px;
     padding-bottom: 40px;
     .Description_application {
-        @include font-text('RobotoLight');
+        @include font-text($textefin);
         text-align : center;
         padding-bottom: $espacement_moyen;
         h2 {
@@ -126,18 +139,7 @@ header {
             width : 80% ;
         }
     }
-    button {
-        @include flex_center(center);
-        border-radius: 20px;
-        border: 0 $blanc solid;
-        width: 200px;
-        height: 40px;
-        background: linear-gradient(to top left, $couleur-primaire, $couleur-secondaire);
-        color: $blanc;
-        box-shadow: 0 4px 4px darken($gris-clair, 10%);
-    }
 }
-
 
 /* deuxième div */
 
@@ -189,7 +191,7 @@ header {
         border-radius: $espacement_moyen;
         box-shadow: 0 4px 4px darken($blanc, 10%);
         margin-bottom: $espacement_moyen;
-        .restaurant--picture { /* A modifier, c'est juste pour l'aperçu */
+        .restaurant--picture {
             width: 100%;
             height: 150px;
             object-fit: cover;
@@ -200,7 +202,7 @@ header {
             margin-bottom: 0;
         }
         .restaurant_localisation {
-            @include font-text('RobotoLight');
+            @include font-text($textefin);
             @include marges-auto($espacement_moyen);
         }
         .fa-heart {
@@ -216,10 +218,6 @@ header {
     
 }
 
-
-
-
-
 /* footer */
 footer {
     @include font-logo();
@@ -230,3 +228,54 @@ footer {
     background-color: $gris-sombre;
 }
 
+
+/* PAGE RESTAURANT*/
+/*body*/
+
+.Menu_du_restaurant {
+    position: relative;
+    top: -50px;
+    background-color: darken($blanc, 3%);
+    padding-top: 1px;
+    padding-bottom: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    h1 {
+        margin-left: $espacement_moyen;
+        @include font-logo();
+    }
+    h1, .fa-heart {
+        display: flex;
+        justify-content: space-between;
+        margin-right: $espacement_moyen;
+    }
+}
+
+.section_des_menus{
+
+    h3 {
+        @include font-text($textefin);
+    }
+}
+
+.banniere_restaurant { /*A modifier, juste pour tests*/
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+/*
+TO DO list
+
+créer chaque restaurant
+
+Faire les liens accueil - restau, accueil-accueil ?
+
+Faire les media queries
+
+Faire les animations
+
+
+
+*/
