@@ -47,7 +47,7 @@ body {
 .max-width-container {
   margin-right: auto;
   margin-left: auto;
-  max-width: 330px;
+  max-width: 350px;
 }
 
 button {
@@ -191,6 +191,8 @@ footer {
   font-family: "Shrikhand";
   padding-left: 20px;
   padding-top: 10px;
+  margin-top: -50px;
+  /* sert a corriger l'écart produit par le changement de position sous la bannière */
   padding-bottom: 2px;
   color: #fff;
   background-color: #353535;
@@ -198,16 +200,23 @@ footer {
 
 /* PAGE RESTAURANT*/
 /*body*/
+.banniere_restaurant {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
 .Menu_du_restaurant {
   position: relative;
   top: -50px;
   background-color: #f7f7f7;
   padding-top: 1px;
-  padding-bottom: 50px;
+  padding-bottom: 1px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
 .Menu_du_restaurant h1 {
+  padding-top: 20px;
   margin-left: 20px;
   font-family: "Shrikhand";
 }
@@ -217,15 +226,55 @@ footer {
   margin-right: 20px;
 }
 
-.section_des_menus h3 {
+.section_des_menus > h3 {
   font-family: "RobotoLight";
+  padding-top: 20px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 3px #99E2D0 solid;
+  width: 50px;
+  /* sert a changer la taille de la bordure verte*/
+}
+.section_des_menus .menu_plats {
+  background-color: #fff;
+  font-family: "RobotoLight";
+  box-shadow: 0 4px 4px #e6e6e6;
+  border-radius: 20px;
+}
+.section_des_menus .menu_plats h3 {
+  margin-bottom: 0;
+  font-family: "Roboto";
+  padding-top: 10px;
+  margin-left: 10px;
+}
+.section_des_menus .menu_plats .menu_details {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+}
+.section_des_menus .menu_plats .menu_prix {
+  font-family: "Roboto";
+  width: 40px;
+  padding-right: 10px;
 }
 
-.banniere_restaurant {
-  /*A modifier, juste pour tests*/
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+.boutton_commander {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/*footer*/
+.infos_footer {
+  font-family: "Roboto";
+}
+.infos_footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.infos_footer .fa-utensils, .infos_footer .fa-hands-helping {
+  margin-right: 10px;
 }
 
 /*
