@@ -63,12 +63,6 @@ header h1 {
 }
 
 /* Section sous le header avant les restaurants */
-.bloc_sous_header {
-  background-color: #f7f7f7;
-  padding-top: 1px;
-  padding-bottom: 40px;
-}
-
 .utilisateur--localisation {
   display: flex;
   justify-content: center;
@@ -78,24 +72,27 @@ header h1 {
   padding-bottom: 20px;
   box-shadow: 0 -5px 3px #d1d1d1;
 }
-
-.fa-map-marker-alt {
+.utilisateur--localisation .fa-map-marker-alt {
   margin-right: 20px;
 }
 
-.Description_application {
+.bloc_sous_header {
+  background-color: #f7f7f7;
+  padding-top: 1px;
+  padding-bottom: 40px;
+}
+.bloc_sous_header .Description_application {
   font-family: "RobotoLight";
   text-align: center;
   padding-bottom: 20px;
 }
-.Description_application h2 {
+.bloc_sous_header .Description_application h2 {
   font-family: "Roboto";
   margin-right: auto;
   margin-left: auto;
   width: 80%;
 }
-
-button {
+.bloc_sous_header button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,13 +144,45 @@ button {
 
 /* liste des restaurants*/
 .Liste_restaurants {
-  background-color: #eaeaea;
+  background-color: #f7f7f7;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
-
-.restaurant--picture {
+.Liste_restaurants h1 {
+  margin-right: 20px;
+  margin-left: 20px;
+  /* attention cela impacte aussi les h1 sous les photos */
+}
+.Liste_restaurants .restaurants {
+  min-width: 300px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px #e6e6e6;
+  margin-bottom: 20px;
+}
+.Liste_restaurants .restaurants .restaurant--picture {
   /* A modifier, c'est juste pour l'aperçu */
-  width: 200px;
+  width: 100%;
   height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.Liste_restaurants .restaurants h1 {
+  margin-bottom: 0;
+}
+.Liste_restaurants .restaurants .restaurant_localisation {
+  font-family: "RobotoLight";
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.Liste_restaurants .restaurants .fa-heart {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  left: -20px;
+  top: -30px;
+  color: grey;
 }
 
 /* footer */
