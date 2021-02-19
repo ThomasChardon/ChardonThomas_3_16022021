@@ -101,6 +101,24 @@ button {
     box-shadow: 0 4px 4px darken($gris-clair, 10%);
 }
 
+a {
+    text-decoration: none;
+}
+
+/* footer */
+footer {
+    @include font-logo();
+    padding-left: $espacement_moyen;
+    padding-top: $espacement_moyen;
+    margin-top: -50px; /* sert a corriger l'écart produit par le changement de position sous la bannière */
+    padding-bottom: 2px;
+    color : $blanc;
+    background-color: $gris-sombre;
+    .footer_contact {
+        color:$blanc;
+    }
+}
+
 /*PAGE ACCUEIL*/
 /*Header*/
 header {
@@ -180,7 +198,7 @@ header {
 
 .Liste_restaurants {
     background-color: darken($blanc, 3%);
-    padding-bottom: 40px;
+    padding-bottom: 100px;
     padding-top: 40px;
     h1 {
         @include marges-auto($espacement_moyen); /* attention cela impacte aussi les h1 sous les photos */
@@ -190,6 +208,7 @@ header {
         background-color: $blanc;
         border-radius: $espacement_moyen;
         box-shadow: 0 4px 4px darken($blanc, 10%);
+        color:black;
         margin-bottom: $espacement_moyen;
         .restaurant--picture {
             width: 100%;
@@ -218,19 +237,22 @@ header {
     
 }
 
-/* footer */
-footer {
-    @include font-logo();
-    padding-left: $espacement_moyen;
-    padding-top: $espacement_petit;
-    margin-top: -50px; /* sert a corriger l'écart produit par le changement de position sous la bannière */
-    padding-bottom: 2px;
-    color : $blanc;
-    background-color: $gris-sombre;
-}
-
 
 /* PAGE RESTAURANT*/
+/*header*/
+
+.Titre {
+    display: flex;
+    width: 330px;
+    a {
+        display: flex;
+        align-items: center;
+    }
+    h1 {
+        @include marges-auto();
+    }
+}
+
 /*body*/
 .banniere_restaurant {
     width: 100%;
@@ -316,17 +338,30 @@ footer {
     }
 }
 
+
 /*
 TO DO list
 
-créer chaque restaurant
+accueil
+Une section contenant les 4 menus sous forme cartes. Au clic sur la carte,
+l’utilisateur est redirigé vers la page du menu.
 
-Faire les liens accueil - restau, accueil-accueil ?
+
+
+À terme il sera possible de choisir sa
+localisation pour trouver des restaurants proches d’un certain lieu
+faut-il prendre compte de cette phrase ?
+
+créer chaque restaurant
+nom des pages ?
+
+Faire les liens accueil - restau
+accueil-accueil ?
 
 Faire les media queries
 
 Faire les animations
 
-
+passer au W3C, tester sur firefox
 
 */

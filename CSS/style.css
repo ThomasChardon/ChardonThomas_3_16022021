@@ -63,6 +63,25 @@ button {
   box-shadow: 0 4px 4px #d1d1d1;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* footer */
+footer {
+  font-family: "Shrikhand";
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-top: -50px;
+  /* sert a corriger l'écart produit par le changement de position sous la bannière */
+  padding-bottom: 2px;
+  color: #fff;
+  background-color: #353535;
+}
+footer .footer_contact {
+  color: #fff;
+}
+
 /*PAGE ACCUEIL*/
 /*Header*/
 header {
@@ -147,7 +166,7 @@ header h1 {
 /* liste des restaurants*/
 .Liste_restaurants {
   background-color: #f7f7f7;
-  padding-bottom: 40px;
+  padding-bottom: 100px;
   padding-top: 40px;
 }
 .Liste_restaurants h1 {
@@ -160,6 +179,7 @@ header h1 {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 4px #e6e6e6;
+  color: black;
   margin-bottom: 20px;
 }
 .Liste_restaurants .restaurants .restaurant--picture {
@@ -186,19 +206,21 @@ header h1 {
   color: grey;
 }
 
-/* footer */
-footer {
-  font-family: "Shrikhand";
-  padding-left: 20px;
-  padding-top: 10px;
-  margin-top: -50px;
-  /* sert a corriger l'écart produit par le changement de position sous la bannière */
-  padding-bottom: 2px;
-  color: #fff;
-  background-color: #353535;
+/* PAGE RESTAURANT*/
+/*header*/
+.Titre {
+  display: flex;
+  width: 330px;
+}
+.Titre a {
+  display: flex;
+  align-items: center;
+}
+.Titre h1 {
+  margin-right: auto;
+  margin-left: auto;
 }
 
-/* PAGE RESTAURANT*/
 /*body*/
 .banniere_restaurant {
   width: 100%;
@@ -284,15 +306,27 @@ footer {
 /*
 TO DO list
 
-créer chaque restaurant
+accueil
+Une section contenant les 4 menus sous forme cartes. Au clic sur la carte,
+l’utilisateur est redirigé vers la page du menu.
 
-Faire les liens accueil - restau, accueil-accueil ?
+
+
+À terme il sera possible de choisir sa
+localisation pour trouver des restaurants proches d’un certain lieu
+faut-il prendre compte de cette phrase ?
+
+créer chaque restaurant
+nom des pages ?
+
+Faire les liens accueil - restau
+accueil-accueil ?
 
 Faire les media queries
 
 Faire les animations
 
-
+passer au W3C, tester sur firefox
 
 */
 
