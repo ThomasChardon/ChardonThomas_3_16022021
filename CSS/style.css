@@ -273,8 +273,12 @@ footer {
   list-style-type: none;
   padding-left: 0;
 }
+.infos_footer ul li {
+  margin-bottom: 10px;
+}
 .infos_footer .fa-utensils, .infos_footer .fa-hands-helping {
   margin-right: 10px;
+  width: 20px;
 }
 
 /*

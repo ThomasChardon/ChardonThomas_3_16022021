@@ -306,9 +306,13 @@ footer {
     ul {
         list-style-type: none;
         padding-left: 0;
+        li {
+            margin-bottom: $espacement_petit;
+        }
     }
     .fa-utensils, .fa-hands-helping {
         margin-right: $espacement_petit;
+        width: $espacement_moyen;
     }
 }
 
