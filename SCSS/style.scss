@@ -3,24 +3,6 @@
 ca indique de lancer sass, se baser sur le fichier style scss, générer le fichier style css, et mettre a jour a chaque sauvegarde
 */
 
-/*
-Questions à poser
-Comment organiser les pages html ?Dossier ou non ? noms en durs ou non ?
-
-Importance des outils vus en cours ?
-c'est à dire ce qui est le plus utilisé en général
-BEM ?
-variables, mixin, extentions ?
-listes, maps ?
-fonctions ?
-Conditions, boucles ?
-
-Pour les imports, faut-il que je fasse 7 dossiers comme dans le cours ?
-
-Autoprefixer, utile ? (me semble lourd pour peu de resultats)
-
-*/
-
 /*Section fonts*/
 @font-face
 {
@@ -116,6 +98,9 @@ footer {
     background-color: $gris-sombre;
     .footer_contact {
         color:$blanc;
+        &:hover {
+            color: darken($gris-clair, 20%);
+        }
     }
 }
 
@@ -173,14 +158,14 @@ header {
     margin-bottom: $espacement_moyen;
     height: 80px;
     .details_nombres {
+        @include flex_center();
         position: relative;
         left: -5px;
         background-color: $couleur-primaire;
         color: $blanc;
         width: $espacement_moyen;
         height: $espacement_moyen;
-        text-align: center;
-        align-content: center;
+        align-items: center;
         border-radius: 10px;
         font-size: small;
     }
@@ -231,6 +216,10 @@ header {
             left: -20px;
             top: -30px;
             color: grey;
+            &:hover {
+                color: $couleur-tertiaire;
+                border-radius: 5px $couleur-secondaire solid;
+            }
         }
         
     }
@@ -247,6 +236,7 @@ header {
     a {
         display: flex;
         align-items: center;
+        color: black;
     }
     h1 {
         @include marges-auto();
@@ -276,6 +266,7 @@ header {
     h1, .fa-heart {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-right: $espacement_moyen;
     }
 }
@@ -325,6 +316,9 @@ header {
 /*footer*/
 .infos_footer {
     @include font-text();
+
+    /*insérer media queries ici */
+
     ul {
         list-style-type: none;
         padding-left: 0;
@@ -336,32 +330,41 @@ header {
         margin-right: $espacement_petit;
         width: $espacement_moyen;
     }
+
 }
 
+
+
+/*
+Questions à poser
+Comment organiser les pages html ?Dossier ou non ? noms en durs ou non ?
+
+CSS
+7-1
+peut-être adapter
+dossiers :
+variables
+mixin
+fonctions
+
+*/
 
 /*
 TO DO list
 
-accueil
-Une section contenant les 4 menus sous forme cartes. Au clic sur la carte,
-l’utilisateur est redirigé vers la page du menu.
+partir du mobile a 320
 
-
-
-À terme il sera possible de choisir sa
-localisation pour trouver des restaurants proches d’un certain lieu
-faut-il prendre compte de cette phrase ?
-
-créer chaque restaurant
-nom des pages ?
-
-Faire les liens accueil - restau
 accueil-accueil ?
+oui
++ajouter liens au footer meme si pas demandé (comme contact)
 
-Faire les media queries
+1 Faire les animations 
 
-Faire les animations
+2 passer au W3C, tester sur firefox
 
-passer au W3C, tester sur firefox
+3 Faire les media queries (voir exemple footer)
+
+4 créer chaque restaurant
+
 
 */

@@ -3,23 +3,6 @@
 ./dart-sass/sass SCSS/style.scss CSS/style.css --watch
 ca indique de lancer sass, se baser sur le fichier style scss, générer le fichier style css, et mettre a jour a chaque sauvegarde
 */
-/*
-Questions à poser
-Comment organiser les pages html ?Dossier ou non ? noms en durs ou non ?
-
-Importance des outils vus en cours ?
-c'est à dire ce qui est le plus utilisé en général
-BEM ?
-variables, mixin, extentions ?
-listes, maps ?
-fonctions ?
-Conditions, boucles ?
-
-Pour les imports, faut-il que je fasse 7 dossiers comme dans le cours ?
-
-Autoprefixer, utile ? (me semble lourd pour peu de resultats)
-
-*/
 /*Section fonts*/
 @font-face {
   font-family: "Shrikhand";
@@ -80,6 +63,9 @@ footer {
 }
 footer .footer_contact {
   color: #fff;
+}
+footer .footer_contact:hover {
+  color: #b7b7b7;
 }
 
 /*PAGE ACCUEIL*/
@@ -142,14 +128,16 @@ header h1 {
   height: 80px;
 }
 .Fonctionnement--details .details_nombres {
+  display: flex;
+  justify-content: center;
+  align-items: initial;
   position: relative;
   left: -5px;
   background-color: #9356DC;
   color: #fff;
   width: 20px;
   height: 20px;
-  text-align: center;
-  align-content: center;
+  align-items: center;
   border-radius: 10px;
   font-size: small;
 }
@@ -205,6 +193,10 @@ header h1 {
   top: -30px;
   color: grey;
 }
+.Liste_restaurants .restaurants .fa-heart:hover {
+  color: #99E2D0;
+  border-radius: 5px #FF79DA solid;
+}
 
 /* PAGE RESTAURANT*/
 /*header*/
@@ -215,6 +207,7 @@ header h1 {
 .Titre a {
   display: flex;
   align-items: center;
+  color: black;
 }
 .Titre h1 {
   margin-right: auto;
@@ -245,6 +238,7 @@ header h1 {
 .Menu_du_restaurant h1, .Menu_du_restaurant .fa-heart {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-right: 20px;
 }
 
@@ -290,6 +284,7 @@ header h1 {
 /*footer*/
 .infos_footer {
   font-family: "Roboto";
+  /*insérer media queries ici */
 }
 .infos_footer ul {
   list-style-type: none;
@@ -304,29 +299,35 @@ header h1 {
 }
 
 /*
+Questions à poser
+Comment organiser les pages html ?Dossier ou non ? noms en durs ou non ?
+
+CSS
+7-1
+peut-être adapter
+dossiers :
+variables
+mixin
+fonctions
+
+*/
+/*
 TO DO list
 
-accueil
-Une section contenant les 4 menus sous forme cartes. Au clic sur la carte,
-l’utilisateur est redirigé vers la page du menu.
+partir du mobile a 320
 
-
-
-À terme il sera possible de choisir sa
-localisation pour trouver des restaurants proches d’un certain lieu
-faut-il prendre compte de cette phrase ?
-
-créer chaque restaurant
-nom des pages ?
-
-Faire les liens accueil - restau
 accueil-accueil ?
+oui
++ajouter liens au footer meme si pas demandé (comme contact)
 
-Faire les media queries
+1 Faire les animations 
 
-Faire les animations
+2 passer au W3C, tester sur firefox
 
-passer au W3C, tester sur firefox
+3 Faire les media queries (voir exemple footer)
+
+4 créer chaque restaurant
+
 
 */
 
