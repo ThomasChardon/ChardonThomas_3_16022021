@@ -31,6 +31,7 @@ $textefin : 'RobotoLight';
 $espacement_petit : 10px;
 $espacement_moyen : 20px;
 $blanc : #fff;
+$noir : #000;
 $gris-clair : rgb(234,234,234);
 $gris-sombre : rgb(53,53,53);
 $couleur-primaire : #9356DC;
@@ -90,6 +91,7 @@ button {
 
 a {
     text-decoration: none;
+    color:$noir;
 }
 
 /* footer */
@@ -202,7 +204,7 @@ header {
         background-color: $blanc;
         border-radius: $espacement_moyen;
         box-shadow: 0 4px 4px darken($blanc, 10%);
-        color:black;
+        color:$noir;
         margin-bottom: $espacement_moyen;
         .restaurant--picture {
             width: 100%;
@@ -219,22 +221,29 @@ header {
             @include marges-auto($espacement_moyen);
         }
         .fa-heart {
+            width:20px;
+            margin-left: 324px;
             display: flex;
             justify-content: flex-end;
             position: relative;
             left: -20px;
             top: -30px;
             color: grey;
-            transition: transform 400ms;
+            transition: transform 400ms, color 400ms;
             &:hover + .coeur {
                 transform: scale(1);
             }
+            &:hover {
+                color:$couleur-secondaire;
+            }
         }
         .coeur {
+            width:20px;
+            margin-left: 324px;
             position: relative;
             left: -20px;
             top: -45px;
-            transform-origin: 340px 5px;
+            transform-origin: 10px 5px;
             transform: scale(0);
             color: $couleur-secondaire;
             // color: linear-gradient(to top right, $couleur-secondaire, $couleur-tertiaire); /*marche pas*/
@@ -256,7 +265,7 @@ header {
     a {
         display: flex;
         align-items: center;
-        color: black;
+        color: $noir;
     }
     h1 {
         @include marges-auto();

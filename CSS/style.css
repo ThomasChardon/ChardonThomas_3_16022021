@@ -52,6 +52,7 @@ button:hover {
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 /* footer */
@@ -175,7 +176,7 @@ header h1 {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 4px #e6e6e6;
-  color: black;
+  color: #000;
   margin-bottom: 20px;
 }
 .Liste_restaurants .restaurants .restaurant--picture {
@@ -194,22 +195,29 @@ header h1 {
   margin-left: 20px;
 }
 .Liste_restaurants .restaurants .fa-heart {
+  width: 20px;
+  margin-left: 324px;
   display: flex;
   justify-content: flex-end;
   position: relative;
   left: -20px;
   top: -30px;
   color: grey;
-  transition: transform 400ms;
+  transition: transform 400ms, color 400ms;
 }
 .Liste_restaurants .restaurants .fa-heart:hover + .coeur {
   transform: scale(1);
 }
+.Liste_restaurants .restaurants .fa-heart:hover {
+  color: #FF79DA;
+}
 .Liste_restaurants .restaurants .coeur {
+  width: 20px;
+  margin-left: 324px;
   position: relative;
   left: -20px;
   top: -45px;
-  transform-origin: 340px 5px;
+  transform-origin: 10px 5px;
   transform: scale(0);
   color: #FF79DA;
 }
@@ -226,7 +234,7 @@ header h1 {
 .Titre a {
   display: flex;
   align-items: center;
-  color: black;
+  color: #000;
 }
 .Titre h1 {
   margin-right: auto;
