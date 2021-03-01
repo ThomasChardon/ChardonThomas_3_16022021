@@ -327,19 +327,44 @@ header {
         .menu_details {
             display: flex;
             justify-content: space-between;
+            width: 240px;
+            // text-overflow: clip ellipsis;
+            // white-space: nowrap;
+            // overflow: hidden;
+            // max-width: 150px;
             padding-top: 5px;
             padding-bottom: $espacement_petit;
             margin-left: $espacement_petit;
+            p{
+                width: 200px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                margin: 0;
+            }
         }
         .menu_prix {
             @include font-text();
             width: 40px;
-            padding-right: 10px;
+            padding-left: 10px;
         }
         .Animation_selection_menu {
             display: flex;
-            background-color: green; /*changement a effectuer*/
+            background-color: $couleur-tertiaire;
             width: 50px;
+            border-top-right-radius: $espacement_moyen;
+            border-bottom-right-radius: $espacement_moyen;
+            .fa-check-circle {
+                color:$blanc;
+                width:100%;
+                @include flex_center(center);
+            }
+            transition: transform 400ms;
+            transform: scaleX(1);
+            transform-origin: 100% 0%;
+            &:hover {
+                transform: scaleX(0);
+            }
         }
         
     }
@@ -390,7 +415,13 @@ fonctions
 /*
 TO DO list
 
-partir du mobile a 320
+décaler flèche header (droite)
+
+ajouter curseur pointeur sur éléments cliquables
+
+ajouter visuel sur élément cliquable (menu entre autres, grossissement photo)
+
+changer boutons 123 (foncé)
 
 accueil-accueil ?
 oui

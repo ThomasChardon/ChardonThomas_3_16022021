@@ -297,20 +297,42 @@ header h1 {
 .section_des_menus .menu_plats .menu_details {
   display: flex;
   justify-content: space-between;
+  width: 240px;
   padding-top: 5px;
   padding-bottom: 10px;
   margin-left: 10px;
 }
+.section_des_menus .menu_plats .menu_details p {
+  width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
 .section_des_menus .menu_plats .menu_prix {
   font-family: "Roboto";
   width: 40px;
-  padding-right: 10px;
+  padding-left: 10px;
 }
 .section_des_menus .menu_plats .Animation_selection_menu {
   display: flex;
-  background-color: green;
-  /*changement a effectuer*/
+  background-color: #99E2D0;
   width: 50px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: transform 400ms;
+  transform: scaleX(1);
+  transform-origin: 100% 0%;
+}
+.section_des_menus .menu_plats .Animation_selection_menu .fa-check-circle {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section_des_menus .menu_plats .Animation_selection_menu:hover {
+  transform: scaleX(0);
 }
 
 .boutton_commander {
@@ -351,7 +373,13 @@ fonctions
 /*
 TO DO list
 
-partir du mobile a 320
+décaler flèche header (droite)
+
+ajouter curseur pointeur sur éléments cliquables
+
+ajouter visuel sur élément cliquable (menu entre autres, grossissement photo)
+
+changer boutons 123 (foncé)
 
 accueil-accueil ?
 oui
