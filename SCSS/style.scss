@@ -359,11 +359,11 @@ header {
                 width:100%;
                 @include flex_center(center);
             }
-            transition: transform 400ms;
-            transform: scaleX(1);
+            transition: transform 600ms;
+            transform: translateX(50px);
             transform-origin: 100% 0%;
             &:hover {
-                transform: scaleX(0);
+                transform: translateX(0);
             }
         }
         

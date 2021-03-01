@@ -320,8 +320,8 @@ header h1 {
   width: 50px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  transition: transform 400ms;
-  transform: scaleX(1);
+  transition: transform 600ms;
+  transform: translateX(50px);
   transform-origin: 100% 0%;
 }
 .section_des_menus .menu_plats .Animation_selection_menu .fa-check-circle {
@@ -332,7 +332,7 @@ header h1 {
   align-items: center;
 }
 .section_des_menus .menu_plats .Animation_selection_menu:hover {
-  transform: scaleX(0);
+  transform: translateX(0);
 }
 
 .boutton_commander {
