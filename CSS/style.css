@@ -3,6 +3,7 @@
 ./dart-sass/sass SCSS/style.scss CSS/style.css --watch
 ca indique de lancer sass, se baser sur le fichier style scss, générer le fichier style css, et mettre a jour a chaque sauvegarde
 */
+/* Les variables */
 /*Section fonts*/
 @font-face {
   font-family: "Shrikhand";
@@ -19,7 +20,6 @@ ca indique de lancer sass, se baser sur le fichier style scss, générer le fich
   src: url("../fonts/Roboto-Light.ttf") format("truetype");
   font-style: normal;
 }
-/* Les variables */
 /* Les mixin */
 /* Les Keyframes */
 @keyframes apparition {
@@ -129,6 +129,67 @@ footer .footer_contact:hover {
 }
 
 /*PAGE ACCUEIL*/
+/* Chargement de la page */
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 0.8s ease-in-out 3;
+  animation: load7 0.8s ease-in-out 3;
+}
+
+.loader {
+  color: #9356DC;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 3.5em;
+}
+
+@-webkit-keyframes load7 {
+  0%, 80%, 100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%, 80%, 100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+/* Va de pair avec la classe loader de index.html (retirée pour l'instant).
+sujet à voir car flou pour ma part */
 /* Section sous le header avant les restaurants */
 .utilisateur--localisation {
   display: flex;
@@ -664,6 +725,9 @@ footer .footer_contact:hover {
 
 /*
 Questions à poser
+
+loeader : comment ça marche ?
+
 Comment organiser les pages html ?Dossier ou non ? noms en durs ou non ?
 
 CSS
@@ -678,8 +742,6 @@ fonctions
 /*
 TO DO list
 
-+ajouter liens au footer meme si pas demandé (comme contact)
-
 1 Faire les animations 
 
 2 passer au W3C, tester sur firefox
@@ -689,6 +751,14 @@ TO DO list
 4 créer chaque restaurant
 
 
+
+
+Finir les animations
+Finir la version responsive
+Checker le W3C
+Objectifs secondaires :
+version tablette / desktop : voir les réarrengements
+préparer la soutenance (en dernier objectif si tout est terminé au dessus)
 */
 
 /*# sourceMappingURL=style.css.map */

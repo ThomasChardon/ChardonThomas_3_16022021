@@ -3,6 +3,8 @@
 ca indique de lancer sass, se baser sur le fichier style scss, générer le fichier style css, et mettre a jour a chaque sauvegarde
 */
 
+@import "./utils/variables";
+
 /*Section fonts*/
 @font-face
 {
@@ -24,20 +26,6 @@ ca indique de lancer sass, se baser sur le fichier style scss, générer le fich
     src: url("../fonts/Roboto-Light.ttf") format("truetype");
     font-style:normal;
 }
-
-/* Les variables */
-$taille-regular : 'Roboto';
-$textefin : 'RobotoLight';
-$espacement_petit : 10px;
-$espacement_moyen : 20px;
-$blanc : #fff;
-$noir : #000;
-$gris-clair : rgb(234,234,234);
-$gris-sombre : rgb(53,53,53);
-$couleur-primaire : #9356DC;
-$couleur-secondaire : #FF79DA;
-$couleur-tertiaire : #99E2D0;
-$couleur-gradiant : linear-gradient(to top left, $couleur-primaire, $couleur-secondaire);
 
 /* Les mixin */
 @mixin font-logo()
@@ -174,8 +162,71 @@ footer {
 }
 
 /*PAGE ACCUEIL*/
-/* Section sous le header avant les restaurants */
+/* Chargement de la page */
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 0.8s ease-in-out 3;
+  animation: load7 0.8s ease-in-out 3;
+}
+.loader {
+  color: $couleur-primaire;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
 
+/* Va de pair avec la classe loader de index.html (retirée pour l'instant).
+sujet à voir car flou pour ma part */
+
+
+
+/* Section sous le header avant les restaurants */
 .utilisateur--localisation {
     @include flex_center();
     background-color: $gris-clair;
@@ -471,6 +522,9 @@ footer {
 
 /*
 Questions à poser
+
+loeader : comment ça marche ?
+
 Comment organiser les pages html ?Dossier ou non ? noms en durs ou non ?
 
 CSS
@@ -486,8 +540,6 @@ fonctions
 /*
 TO DO list
 
-+ajouter liens au footer meme si pas demandé (comme contact)
-
 1 Faire les animations 
 
 2 passer au W3C, tester sur firefox
@@ -497,4 +549,12 @@ TO DO list
 4 créer chaque restaurant
 
 
+
+
+Finir les animations
+Finir la version responsive
+Checker le W3C
+Objectifs secondaires :
+version tablette / desktop : voir les réarrengements
+préparer la soutenance (en dernier objectif si tout est terminé au dessus)
 */
