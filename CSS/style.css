@@ -21,6 +21,29 @@ ca indique de lancer sass, se baser sur le fichier style scss, générer le fich
 }
 /* Les variables */
 /* Les mixin */
+/* Les Keyframes */
+@keyframes apparition {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(10px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /* Règle générale à toute les pages */
 body {
   margin: 0;
@@ -306,6 +329,9 @@ footer .footer_contact:hover {
   font-family: "RobotoLight";
   box-shadow: 0 4px 4px #e6e6e6;
   border-radius: 20px;
+  animation: apparition 1000ms;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
   cursor: pointer;
 }
 .section_des_menus .menu_plats h3 {
