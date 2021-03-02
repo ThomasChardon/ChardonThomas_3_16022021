@@ -358,6 +358,7 @@ sujet à voir car flou pour ma part */
             transform: scale(0);
             background: -webkit-linear-gradient(top right, $couleur-primaire, $couleur-secondaire);
             -webkit-background-clip: text;
+                    background-clip: text;
             -webkit-text-fill-color: transparent;
             &:hover {
                 transform: scale(1);
