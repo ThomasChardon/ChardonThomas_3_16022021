@@ -77,6 +77,7 @@ body {
 button {
     @include flex_center(center);
     border-radius: 20px;
+    cursor: pointer;
     border: 0 $blanc solid;
     width: 200px;
     height: 40px;
@@ -92,6 +93,7 @@ button {
 a {
     text-decoration: none;
     color:$noir;
+    cursor: pointer;
 }
 
 /* footer */
@@ -302,7 +304,10 @@ header {
 }
 
 .section_des_menus{
-    
+    .detail_menu_plats {
+        width: 100%;
+        transition: width 500ms;
+    }
     > h3 {
         @include font-text($textefin);
         padding-top:$espacement_moyen;
@@ -312,6 +317,7 @@ header {
         width: 50px; /* sert a changer la taille de la bordure verte*/
     }
     .menu_plats {
+        overflow: hidden;
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
@@ -327,16 +333,12 @@ header {
         .menu_details {
             display: flex;
             justify-content: space-between;
-            width: 240px;
-            // text-overflow: clip ellipsis;
-            // white-space: nowrap;
-            // overflow: hidden;
-            // max-width: 150px;
+            // width: 240px;
             padding-top: 5px;
             padding-bottom: $espacement_petit;
             margin-left: $espacement_petit;
             p{
-                width: 200px;
+                width: 80%;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
@@ -351,22 +353,31 @@ header {
         .Animation_selection_menu {
             display: flex;
             background-color: $couleur-tertiaire;
-            width: 50px;
+            width: 0;
             border-top-right-radius: $espacement_moyen;
             border-bottom-right-radius: $espacement_moyen;
-            .fa-check-circle {
+            transition: width 500ms;
+            transform: width(50px);
+            transform-origin: right;
+            .fa-check-circle {  
                 color:$blanc;
                 width:100%;
                 @include flex_center(center);
             }
-            transition: transform 600ms;
-            transform: translateX(50px);
-            transform-origin: 100% 0%;
             &:hover {
-                transform: translateX(0);
+                transition: width 500ms ease-in-out;
+                width:50px;
             }
         }
-        
+        cursor: pointer;
+        &:hover > .Animation_selection_menu { 
+            transition: width 500ms ease-in-out;
+            width:50px;
+        }
+        &:hover > .detail_menu_plats { 
+            transition: width 500ms ease-in-out;
+            width:84%;
+        }
     }
 }
 
