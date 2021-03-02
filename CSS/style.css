@@ -180,6 +180,12 @@ header h1 {
   box-shadow: 0 4px 4px #e6e6e6;
   color: #000;
   margin-bottom: 20px;
+  overflow: hidden;
+}
+.Liste_restaurants .restaurants:hover a img {
+  transform: scale(1.25);
+  transform-origin: bottom;
+  transition: all 0.4s;
 }
 .Liste_restaurants .restaurants .restaurant--picture {
   width: 100%;
@@ -187,6 +193,8 @@ header h1 {
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  transition: all 0.4s;
+  transform-origin: bottom;
 }
 .Liste_restaurants .restaurants h1 {
   margin-bottom: 0;
