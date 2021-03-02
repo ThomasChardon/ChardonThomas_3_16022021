@@ -90,10 +90,35 @@ button {
     }
 }
 
+/*Tous les liens*/
 a {
     text-decoration: none;
     color:$noir;
     cursor: pointer;
+}
+
+/*Header*/
+header {
+    @include flex_center();
+}
+
+.Titre {
+    display: flex;
+    width: 330px;
+    @include font-logo();
+    @include flex_center();
+    a {
+        display: flex;
+        align-items: center;
+        color: $noir;
+        margin-left: $espacement_petit;
+        margin-right: $espacement_petit;
+    }
+    h1 {
+        @include marges-auto();
+        margin-bottom: $espacement_petit;
+        margin-top: $espacement_petit;
+    }
 }
 
 /* footer */
@@ -114,16 +139,6 @@ footer {
 }
 
 /*PAGE ACCUEIL*/
-/*Header*/
-header {
-    @include font-logo();
-    @include flex_center();
-    h1 {
-        margin-bottom: $espacement_petit;
-        margin-top: $espacement_petit;
-    }
-}
-
 /* Section sous le header avant les restaurants */
 
 .utilisateur--localisation {
@@ -187,7 +202,7 @@ header {
         margin-right: auto;
     }
     &:hover {
-        background-color: darken($blanc, 1%);
+        background-color: lighten($couleur-primaire, 36%);
         box-shadow: 0 5px 3px darken($blanc, 15%);
     }
 }
@@ -268,20 +283,6 @@ header {
 
 
 /* PAGE RESTAURANT*/
-/*header*/
-
-.Titre {
-    display: flex;
-    width: 330px;
-    a {
-        display: flex;
-        align-items: center;
-        color: $noir;
-    }
-    h1 {
-        @include marges-auto();
-    }
-}
 
 /*body*/
 .banniere_restaurant {
@@ -307,7 +308,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-right: $espacement_moyen;
+        margin-right: $espacement_petit;
     }
 }
 
@@ -440,16 +441,6 @@ fonctions
 /*
 TO DO list
 
-décaler flèche header (droite)
-
-ajouter curseur pointeur sur éléments cliquables
-
-ajouter visuel sur élément cliquable (menu entre autres, grossissement photo)
-
-changer boutons 123 (foncé)
-
-accueil-accueil ?
-oui
 +ajouter liens au footer meme si pas demandé (comme contact)
 
 1 Faire les animations 

@@ -51,10 +51,40 @@ button:hover {
   box-shadow: 0 5px 3px #d9d9d9;
 }
 
+/*Tous les liens*/
 a {
   text-decoration: none;
   color: #000;
   cursor: pointer;
+}
+
+/*Header*/
+header {
+  display: flex;
+  justify-content: center;
+  align-items: initial;
+}
+
+.Titre {
+  display: flex;
+  width: 330px;
+  font-family: "Shrikhand";
+  display: flex;
+  justify-content: center;
+  align-items: initial;
+}
+.Titre a {
+  display: flex;
+  align-items: center;
+  color: #000;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.Titre h1 {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 /* footer */
@@ -76,18 +106,6 @@ footer .footer_contact:hover {
 }
 
 /*PAGE ACCUEIL*/
-/*Header*/
-header {
-  font-family: "Shrikhand";
-  display: flex;
-  justify-content: center;
-  align-items: initial;
-}
-header h1 {
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
 /* Section sous le header avant les restaurants */
 .utilisateur--localisation {
   display: flex;
@@ -158,7 +176,7 @@ header h1 {
   margin-right: auto;
 }
 .Fonctionnement--details:hover {
-  background-color: #fcfcfc;
+  background-color: #f4eefc;
   box-shadow: 0 5px 3px #d9d9d9;
 }
 
@@ -238,21 +256,6 @@ header h1 {
 }
 
 /* PAGE RESTAURANT*/
-/*header*/
-.Titre {
-  display: flex;
-  width: 330px;
-}
-.Titre a {
-  display: flex;
-  align-items: center;
-  color: #000;
-}
-.Titre h1 {
-  margin-right: auto;
-  margin-left: auto;
-}
-
 /*body*/
 .banniere_restaurant {
   width: 100%;
@@ -278,7 +281,7 @@ header h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .section_des_menus .detail_menu_plats {
@@ -402,16 +405,6 @@ fonctions
 /*
 TO DO list
 
-décaler flèche header (droite)
-
-ajouter curseur pointeur sur éléments cliquables
-
-ajouter visuel sur élément cliquable (menu entre autres, grossissement photo)
-
-changer boutons 123 (foncé)
-
-accueil-accueil ?
-oui
 +ajouter liens au footer meme si pas demandé (comme contact)
 
 1 Faire les animations 
