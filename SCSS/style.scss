@@ -363,6 +363,7 @@ header {
                 color:$blanc;
                 width:100%;
                 @include flex_center(center);
+                transform: rotate(0deg);
             }
             &:hover {
                 transition: width 500ms ease-in-out;
@@ -373,6 +374,11 @@ header {
         &:hover > .Animation_selection_menu { 
             transition: width 500ms ease-in-out;
             width:50px;
+            .fa-check-circle { 
+                transition: transform 500ms ease-in-out;
+                transform: rotate(360deg);
+                // animation-direction: reverse;
+            }
         }
         &:hover > .detail_menu_plats { 
             transition: width 500ms ease-in-out;

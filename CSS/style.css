@@ -337,6 +337,7 @@ header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: rotate(0deg);
 }
 .section_des_menus .menu_plats .Animation_selection_menu:hover {
   transition: width 500ms ease-in-out;
@@ -345,6 +346,10 @@ header h1 {
 .section_des_menus .menu_plats:hover > .Animation_selection_menu {
   transition: width 500ms ease-in-out;
   width: 50px;
+}
+.section_des_menus .menu_plats:hover > .Animation_selection_menu .fa-check-circle {
+  transition: transform 500ms ease-in-out;
+  transform: rotate(360deg);
 }
 .section_des_menus .menu_plats:hover > .detail_menu_plats {
   transition: width 500ms ease-in-out;
