@@ -307,6 +307,256 @@ footer .footer_contact:hover {
   margin-right: 10px;
 }
 
+.section_des_menus > div:nth-child(1) {
+  animation: apparition 1000ms 0.2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(2) {
+  animation: apparition 1000ms 0.4s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(3) {
+  animation: apparition 1000ms 0.6s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(4) {
+  animation: apparition 1000ms 0.8s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(5) {
+  animation: apparition 1000ms 1s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(6) {
+  animation: apparition 1000ms 1.2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(7) {
+  animation: apparition 1000ms 1.4s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(8) {
+  animation: apparition 1000ms 1.6s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(9) {
+  animation: apparition 1000ms 1.8s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(10) {
+  animation: apparition 1000ms 2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(11) {
+  animation: apparition 1000ms 2.2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(12) {
+  animation: apparition 1000ms 2.4s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(13) {
+  animation: apparition 1000ms 2.6s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(14) {
+  animation: apparition 1000ms 2.8s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(15) {
+  animation: apparition 1000ms 3s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(16) {
+  animation: apparition 1000ms 3.2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(17) {
+  animation: apparition 1000ms 3.4s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(18) {
+  animation: apparition 1000ms 3.6s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(19) {
+  animation: apparition 1000ms 3.8s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(20) {
+  animation: apparition 1000ms 4s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(21) {
+  animation: apparition 1000ms 4.2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(22) {
+  animation: apparition 1000ms 4.4s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(23) {
+  animation: apparition 1000ms 4.6s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(24) {
+  animation: apparition 1000ms 4.8s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(25) {
+  animation: apparition 1000ms 5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(26) {
+  animation: apparition 1000ms 5.2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(27) {
+  animation: apparition 1000ms 5.4s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(28) {
+  animation: apparition 1000ms 5.6s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(29) {
+  animation: apparition 1000ms 5.8s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(30) {
+  animation: apparition 1000ms 6s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(31) {
+  animation: apparition 1000ms 6.2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(32) {
+  animation: apparition 1000ms 6.4s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(33) {
+  animation: apparition 1000ms 6.6s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(34) {
+  animation: apparition 1000ms 6.8s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(35) {
+  animation: apparition 1000ms 7s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(36) {
+  animation: apparition 1000ms 7.2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(37) {
+  animation: apparition 1000ms 7.4s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(38) {
+  animation: apparition 1000ms 7.6s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(39) {
+  animation: apparition 1000ms 7.8s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(40) {
+  animation: apparition 1000ms 8s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(41) {
+  animation: apparition 1000ms 8.2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(42) {
+  animation: apparition 1000ms 8.4s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(43) {
+  animation: apparition 1000ms 8.6s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(44) {
+  animation: apparition 1000ms 8.8s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(45) {
+  animation: apparition 1000ms 9s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(46) {
+  animation: apparition 1000ms 9.2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(47) {
+  animation: apparition 1000ms 9.4s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(48) {
+  animation: apparition 1000ms 9.6s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(49) {
+  animation: apparition 1000ms 9.8s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+.section_des_menus > div:nth-child(50) {
+  animation: apparition 1000ms 10s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
 .section_des_menus .detail_menu_plats {
   width: 100%;
   transition: width 500ms;
@@ -329,9 +579,6 @@ footer .footer_contact:hover {
   font-family: "RobotoLight";
   box-shadow: 0 4px 4px #e6e6e6;
   border-radius: 20px;
-  animation: apparition 1000ms;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
   cursor: pointer;
 }
 .section_des_menus .menu_plats h3 {
