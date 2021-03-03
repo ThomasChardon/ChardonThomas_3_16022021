@@ -165,7 +165,7 @@ footer {
 /* Chargement de la page */
 
 .loading {
-    $colors: #7ef9ff, #89cff0, #4682b4, #0f52ba, #000080; /* couleurs à changer */
+    $colors: $couleur-primaire, $couleur-chargement-un, $couleur-secondaire, $couleur-chargement-deux, $couleur-tertiaire;
     display: flex;
     align-items: center;
     height: 570px;
