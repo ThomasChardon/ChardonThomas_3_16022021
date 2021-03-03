@@ -165,9 +165,12 @@ footer {
 /* Chargement de la page */
 
 .loading {
-    $colors: #7ef9ff, #89cff0, #4682b4, #0f52ba, #000080;
+    $colors: #7ef9ff, #89cff0, #4682b4, #0f52ba, #000080; /* couleurs à changer */
     display: flex;
-  
+    align-items: center;
+    height: 570px;
+    margin-bottom: 1000px;
+    animation: stoploader 0.5s linear 2s both;
     .dot {
         position: relative;
         width: 2em;
@@ -218,7 +221,7 @@ footer {
         opacity: 0.5;
     }
     100% {
-        opcaity : 0;
+        opacity: 0;
         display: none;
         visibility: hidden;
         height: 0;
@@ -232,9 +235,11 @@ footer {
         opacity: 0.5;
     }
     100% {
-        opcaity : 0;
+        opacity: 0;
         display: none;
         visibility: hidden;
+        margin-top:0;
+        margin-bottom:0;
         height: 0;
     }
 }

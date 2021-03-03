@@ -131,7 +131,12 @@ footer .footer_contact:hover {
 /*PAGE ACCUEIL*/
 /* Chargement de la page */
 .loading {
+  /* couleurs à changer */
   display: flex;
+  align-items: center;
+  height: 570px;
+  margin-bottom: 1000px;
+  animation: stoploader 0.5s linear 2s both;
 }
 .loading .dot {
   position: relative;
@@ -198,7 +203,7 @@ footer .footer_contact:hover {
     opacity: 0.5;
   }
   100% {
-    opcaity: 0;
+    opacity: 0;
     display: none;
     visibility: hidden;
     height: 0;
@@ -212,9 +217,11 @@ footer .footer_contact:hover {
     opacity: 0.5;
   }
   100% {
-    opcaity: 0;
+    opacity: 0;
     display: none;
     visibility: hidden;
+    margin-top: 0;
+    margin-bottom: 0;
     height: 0;
   }
 }
