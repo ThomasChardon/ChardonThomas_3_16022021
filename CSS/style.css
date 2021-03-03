@@ -307,7 +307,7 @@ sujet à voir car flou pour ma part */
   padding-bottom: 100px;
   padding-top: 40px;
 }
-.Liste_restaurants h1 {
+.Liste_restaurants h2 {
   margin-right: 20px;
   margin-left: 20px;
   /* attention cela impacte aussi les h1 sous les photos */
@@ -335,8 +335,9 @@ sujet à voir car flou pour ma part */
   transition: all 0.4s;
   transform-origin: bottom;
 }
-.Liste_restaurants .restaurants h1 {
-  margin-bottom: 0;
+.Liste_restaurants .restaurants h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
 .Liste_restaurants .restaurants .restaurant_localisation {
   font-family: "RobotoLight";
@@ -370,7 +371,6 @@ sujet à voir car flou pour ma part */
   transform: scale(0);
   background: -webkit-linear-gradient(top right, #9356DC, #FF79DA);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .Liste_restaurants .restaurants .coeur:hover {
@@ -711,7 +711,6 @@ sujet à voir car flou pour ma part */
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   transition: width 500ms;
-  transform: width(50px);
   transform-origin: right;
 }
 .section_des_menus .menu_plats .Animation_selection_menu .fa-check-circle {
@@ -764,7 +763,7 @@ sujet à voir car flou pour ma part */
 /*
 Questions à poser
 
-loeader : comment ça marche ?
+loeader : comment ça marche pour le superposer sur la page puis le faire disparaitre et ce sans JS ?
 
 Comment organiser les pages html ?Dossier ou non ? noms en durs ou non ?
 

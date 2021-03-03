@@ -322,7 +322,7 @@ sujet à voir car flou pour ma part */
     background-color: darken($blanc, 3%);
     padding-bottom: 100px;
     padding-top: 40px;
-    h1 {
+    h2 {
         @include marges-auto($espacement_moyen); /* attention cela impacte aussi les h1 sous les photos */
     }
     .restaurants {
@@ -347,8 +347,9 @@ sujet à voir car flou pour ma part */
             transition: all 0.4s;
             transform-origin: bottom;
         }
-        h1 {
-            margin-bottom: 0;
+        h2 {
+            font-size:1.2em;
+            margin-bottom: $espacement_petit;
         }
         .restaurant_localisation {
             @include font-text($textefin);
@@ -381,7 +382,6 @@ sujet à voir car flou pour ma part */
             transform: scale(0);
             background: -webkit-linear-gradient(top right, $couleur-primaire, $couleur-secondaire);
             -webkit-background-clip: text;
-                    background-clip: text;
             -webkit-text-fill-color: transparent;
             &:hover {
                 transform: scale(1);
@@ -486,7 +486,6 @@ sujet à voir car flou pour ma part */
             border-top-right-radius: $espacement_moyen;
             border-bottom-right-radius: $espacement_moyen;
             transition: width 500ms;
-            transform: width(50px);
             transform-origin: right;
             .fa-check-circle {  
                 color:$blanc;
@@ -547,7 +546,7 @@ sujet à voir car flou pour ma part */
 /*
 Questions à poser
 
-loeader : comment ça marche ?
+loeader : comment ça marche pour le superposer sur la page puis le faire disparaitre et ce sans JS ?
 
 Comment organiser les pages html ?Dossier ou non ? noms en durs ou non ?
 
