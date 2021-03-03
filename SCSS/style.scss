@@ -213,7 +213,7 @@ footer {
   }
   
 
-@-webkit-keyframes stoploader { /*  ----------------------l reste une petite marge a supprimer -----------------------   */
+@-webkit-keyframes stoploader {
     0% {
         opacity: 1;
     }
@@ -243,10 +243,6 @@ footer {
         height: 0;
     }
 }
-
-/* Va de pair avec la classe loader de index.html (retirée pour l'instant).
-sujet à voir car flou pour ma part */
-
 
 
 /* Section sous le header avant les restaurants */
@@ -323,7 +319,7 @@ sujet à voir car flou pour ma part */
     padding-bottom: 100px;
     padding-top: 40px;
     h2 {
-        @include marges-auto($espacement_moyen); /* attention cela impacte aussi les h1 sous les photos */
+        @include marges-auto($espacement_moyen); /* attention cela impacte aussi les h2 sous les photos, voir commentaire vide 20 lignes plus bas */
     }
     .restaurants {
         min-width: 300px;
@@ -347,7 +343,7 @@ sujet à voir car flou pour ma part */
             transition: all 0.4s;
             transform-origin: bottom;
         }
-        h2 {
+        h2 { /************/
             font-size:1.2em;
             margin-bottom: $espacement_petit;
         }
@@ -423,11 +419,6 @@ sujet à voir car flou pour ma part */
 }
 
 .section_des_menus{
-    // div:nth-child(n) {
-    //     animation: apparition 1000ms;
-    //     animation-fill-mode: both;
-    //     animation-timing-function: linear;
-    // }
     > div {
         @include boucle-apparition();
     }
@@ -505,7 +496,6 @@ sujet à voir car flou pour ma part */
             .fa-check-circle { 
                 transition: transform 500ms ease-in-out;
                 transform: rotate(360deg);
-                // animation-direction: reverse;
             }
         }
         &:hover > .detail_menu_plats { 
@@ -563,15 +553,15 @@ fonctions
 /*
 TO DO list
 
-1 Faire les animations 
-
-2 passer au W3C, tester sur firefox
-
 3 Faire les media queries (voir exemple footer)
 
 4 créer chaque restaurant
 
+CHECK
 
+1 Faire les animations 
+
+2 passer au W3C, tester sur firefox
 
 
 Finir les animations

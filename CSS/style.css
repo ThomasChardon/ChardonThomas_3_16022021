@@ -194,7 +194,6 @@ footer .footer_contact:hover {
   }
 }
 @-webkit-keyframes stoploader {
-  /*  ----------------------l reste une petite marge a supprimer -----------------------   */
   0% {
     opacity: 1;
   }
@@ -224,8 +223,6 @@ footer .footer_contact:hover {
     height: 0;
   }
 }
-/* Va de pair avec la classe loader de index.html (retirée pour l'instant).
-sujet à voir car flou pour ma part */
 /* Section sous le header avant les restaurants */
 .utilisateur--localisation {
   display: flex;
@@ -309,7 +306,7 @@ sujet à voir car flou pour ma part */
 .Liste_restaurants h2 {
   margin-right: 20px;
   margin-left: 20px;
-  /* attention cela impacte aussi les h1 sous les photos */
+  /* attention cela impacte aussi les h2 sous les photos, voir commentaire vide 20 lignes plus bas */
 }
 .Liste_restaurants .restaurants {
   min-width: 300px;
@@ -335,6 +332,7 @@ sujet à voir car flou pour ma part */
   transform-origin: bottom;
 }
 .Liste_restaurants .restaurants h2 {
+  /************/
   font-size: 1.2em;
   margin-bottom: 10px;
 }
@@ -778,15 +776,15 @@ fonctions
 /*
 TO DO list
 
-1 Faire les animations 
-
-2 passer au W3C, tester sur firefox
-
 3 Faire les media queries (voir exemple footer)
 
 4 créer chaque restaurant
 
+CHECK
 
+1 Faire les animations 
+
+2 passer au W3C, tester sur firefox
 
 
 Finir les animations
