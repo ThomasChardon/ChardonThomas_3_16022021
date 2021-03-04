@@ -153,6 +153,11 @@ body {
   margin-left: auto;
   max-width: 300px;
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .max-width-container {
+    max-width: 700px;
+  }
+}
 
 button {
   display: flex;
@@ -271,6 +276,11 @@ a {
 .Application--fonctionnement {
   margin-bottom: 70px;
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .Application--fonctionnement {
+    width: 400px;
+  }
+}
 
 .Fonctionnement--details {
   display: flex;
@@ -305,6 +315,11 @@ a {
   margin-left: 0;
   margin-right: auto;
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .Fonctionnement--details .details_phrases {
+    margin-left: 50px;
+  }
+}
 .Fonctionnement--details:hover {
   background-color: #f4eefc;
   box-shadow: 0 5px 3px #d9d9d9;
@@ -316,19 +331,51 @@ a {
   padding-bottom: 100px;
   padding-top: 40px;
 }
-.Liste_restaurants h2 {
-  margin-right: 20px;
-  margin-left: 20px;
-  /* attention cela impacte aussi les h2 sous les photos, voir commentaire vide 20 lignes plus bas */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .Liste_restaurants {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.Liste_restaurants > h2 {
+  width: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  left: -75px;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .Liste_restaurants > h2 {
+    padding-left: 40%;
+    padding-right: 40%;
+    position: inherit;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 .Liste_restaurants .restaurants {
   min-width: 300px;
+  height: 240px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 4px #e6e6e6;
   color: #000;
   margin-bottom: 20px;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .Liste_restaurants .restaurants {
+    width: 370px;
+    display: flex;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .Liste_restaurants .restaurants {
+    width: 420px;
+    display: flex;
+    margin-bottom: 50px;
+  }
 }
 .Liste_restaurants .restaurants:hover a img {
   transform: scale(1.25);
@@ -345,7 +392,8 @@ a {
   transform-origin: bottom;
 }
 .Liste_restaurants .restaurants h2 {
-  /************/
+  margin-right: 20px;
+  margin-left: 20px;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
@@ -356,9 +404,12 @@ a {
 }
 .Liste_restaurants .restaurants .fa-heart {
   width: 20px;
-  margin-left: 274px;
+  height: 20px;
+  margin-left: 275px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: initial;
+  align-items: center;
   position: relative;
   left: -20px;
   top: -30px;
@@ -369,14 +420,15 @@ a {
   transform: scale(1);
 }
 .Liste_restaurants .restaurants .fa-heart:hover {
-  color: #9356DC;
+  background: -webkit-linear-gradient(top right, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .Liste_restaurants .restaurants .coeur {
-  width: 20px;
   margin-left: 274px;
   position: relative;
   left: -20px;
-  top: -45px;
+  top: -50px;
   transform-origin: 10px 5px;
   transform: scale(0);
   background: -webkit-linear-gradient(top right, #9356DC, #FF79DA);
@@ -761,24 +813,13 @@ Questions à poser
 
 loeader : comment ça marche pour le superposer sur la page puis le faire disparaitre et ce sans JS ?
 
-Comment organiser les pages html ?Dossier ou non ? noms en durs ou non ?
-
-CSS
-7-1
-peut-être adapter
-dossiers :
-variables
-mixin
-fonctions
-
 */
 /*
 TO DO list
 
-Corriger menus avec aniimation selection
-
 3 Faire les media queries (voir exemple footer)
 
+5 préparer la soutenance (en dernier objectif si tout est terminé au dessus)
 
 CHECK
 
@@ -788,12 +829,12 @@ CHECK
 
 4 créer chaque restaurant
 
-Finir les animations
+
 Finir la version responsive
-Checker le W3C
+
 Objectifs secondaires :
 version tablette / desktop : voir les réarrengements
-préparer la soutenance (en dernier objectif si tout est terminé au dessus)
+
 */
 
 /*# sourceMappingURL=style.css.map */

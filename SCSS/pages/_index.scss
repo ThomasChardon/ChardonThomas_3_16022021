@@ -71,6 +71,9 @@
 
 .Application--fonctionnement {
     margin-bottom: 70px;
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        width: 400px;
+    }
 }
 
 .Fonctionnement--details {
@@ -99,6 +102,9 @@
     .details_phrases {
         margin-left: 0;
         margin-right: auto;
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            margin-left: 50px;
+        }
     }
     &:hover {
         background-color: lighten($couleur-primaire, 36%);
@@ -112,17 +118,43 @@
     background-color: darken($blanc, 3%);
     padding-bottom: 100px;
     padding-top: 40px;
-    h2 {
-        @include marges-auto($espacement_moyen); /* attention cela impacte aussi les h2 sous les photos, voir commentaire vide 20 lignes plus bas */
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    > h2 {
+        width: 150px;
+        // margin-left: (auto + 20px);
+        @include marges-auto();
+        position: relative;
+        left:-75px;
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            // width: 100%;
+            padding-left:40%;
+            padding-right:40%;
+            position: inherit;
+            @include marges-auto();
+        }
     }
     .restaurants {
         min-width: 300px;
+        height: 240px;
         background-color: $blanc;
         border-radius: $espacement_moyen;
         box-shadow: 0 4px 4px darken($blanc, 10%);
         color:$noir;
         margin-bottom: $espacement_moyen;
         overflow: hidden;
+        @media screen and (min-width: 768px) and (max-width: 1000px) {
+            width:370px;
+            display: flex;
+            margin-bottom: 40px;
+        }
+        @media screen and (min-width: 1000px) and (max-width: 1200px) {
+            width:420px;
+            display: flex;
+            margin-bottom: 50px;
+        }
         &:hover a img {
             transform:scale(1.25);
             transform-origin: bottom;
@@ -137,7 +169,8 @@
             transition: all 0.4s;
             transform-origin: bottom;
         }
-        h2 { /************/
+        h2 {
+            @include marges-auto($espacement_moyen); 
             font-size:1.2em;
             margin-bottom: $espacement_petit;
         }
@@ -147,9 +180,10 @@
         }
         .fa-heart {
             width:20px;
-            margin-left: 274px;
-            display: flex;
-            justify-content: flex-end;
+            height: 20px;
+            margin-left: 275px;
+            @include flex_center();
+            align-items: center;
             position: relative;
             left: -20px;
             top: -30px;
@@ -159,15 +193,16 @@
                 transform: scale(1);
             }
             &:hover {
-                color:$couleur-primaire;
+                background: -webkit-linear-gradient(top right, $couleur-primaire, $couleur-secondaire);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
         .coeur {
-            width:20px;
             margin-left: 274px;
             position: relative;
             left: -20px;
-            top: -45px;
+            top: -50px;
             transform-origin: 10px 5px;
             transform: scale(0);
             background: -webkit-linear-gradient(top right, $couleur-primaire, $couleur-secondaire);
