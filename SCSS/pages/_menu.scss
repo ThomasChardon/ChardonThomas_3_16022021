@@ -1,0 +1,122 @@
+/* PAGE RESTAURANT*/
+
+/*body*/
+.banniere_restaurant {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.Menu_du_restaurant {
+    position: relative;
+    top: -50px;
+    background-color: darken($blanc, 3%);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    h1 {
+        padding-top: $espacement_moyen;
+        margin-left: $espacement_moyen;
+        @include font-logo();
+    }
+    h1, .fa-heart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: $espacement_petit;
+    }
+}
+
+.section_des_menus{
+    > div {
+        @include boucle-apparition();
+    }
+    .detail_menu_plats {
+        width: 100%;
+        transition: width 500ms;
+    }
+    > h3 {
+        @include font-text($textefin);
+        padding-top:$espacement_moyen;
+        margin-left: $espacement_petit;
+        padding-bottom: $espacement_petit;
+        border-bottom: 3px $couleur-tertiaire solid;
+        width: 50px; /* sert a changer la taille de la bordure verte*/
+    }
+    .menu_plats {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        background-color: $blanc;
+        @include font-text($textefin);
+        box-shadow: 0 4px 4px darken($blanc, 10%);
+        border-radius: $espacement_moyen;
+        h3 {
+            margin-bottom: 0;
+            @include font-text();
+            margin-left: $espacement_petit;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .menu_details {
+            display: flex;
+            justify-content: space-between;
+            // width: 240px;
+            padding-top: 5px;
+            padding-bottom: $espacement_petit;
+            margin-left: $espacement_petit;
+            p{
+                width: 80%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                margin: 0;
+            }
+        }
+        .menu_prix {
+            @include font-text();
+            width: 40px;
+            padding-left: 10px;
+        }
+        .Animation_selection_menu {
+            display: flex;
+            background-color: $couleur-tertiaire;
+            width: 0;
+            border-top-right-radius: $espacement_moyen;
+            border-bottom-right-radius: $espacement_moyen;
+            transition: width 500ms;
+            transform-origin: right;
+            .fa-check-circle {  
+                color:$blanc;
+                width:100%;
+                @include flex_center(center);
+                transform: rotate(0deg);
+            }
+            &:hover {
+                transition: width 500ms ease-in-out;
+                width:50px;
+            }
+        }
+        cursor: pointer;
+        &:hover > .Animation_selection_menu { 
+            transition: width 500ms ease-in-out;
+            width:50px;
+            .fa-check-circle { 
+                transition: transform 500ms ease-in-out;
+                transform: rotate(360deg);
+            }
+        }
+        &:hover > .detail_menu_plats { 
+            transition: width 500ms ease-in-out;
+            width:84%;
+        }
+    }
+}
+
+.boutton_commander {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

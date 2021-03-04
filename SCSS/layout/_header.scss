@@ -1,0 +1,23 @@
+/*Header*/
+header {
+    @include flex_center();
+}
+
+.Titre {
+    display: flex;
+    width: 330px;
+    @include font-logo();
+    @include flex_center();
+    a {
+        display: flex;
+        align-items: center;
+        color: $noir;
+        margin-left: $espacement_petit;
+        margin-right: $espacement_petit;
+    }
+    h1 {
+        @include marges-auto();
+        margin-bottom: $espacement_petit;
+        margin-top: $espacement_petit;
+    }
+}

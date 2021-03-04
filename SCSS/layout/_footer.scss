@@ -1,0 +1,33 @@
+/* footer */
+footer {
+    @include font-logo();
+    padding-left: $espacement_moyen;
+    padding-top: $espacement_moyen;
+    margin-top: -50px; /* sert a corriger l'écart produit par le changement de position sous la bannière */
+    padding-bottom: 2px;
+    color : $blanc;
+    background-color: $gris-sombre;
+    .infos_footer {
+        @include font-text();
+    
+        /*insérer media queries ici */
+    
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            li {
+                margin-bottom: $espacement_petit;
+            }
+        }
+        .fa-utensils, .fa-hands-helping {
+            margin-right: $espacement_petit;
+            width: $espacement_moyen;
+        }
+    }
+    .footer_contact {
+        color:$blanc;
+        &:hover {
+            color: darken($gris-clair, 20%);
+        }
+    }
+}

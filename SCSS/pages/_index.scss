@@ -1,0 +1,181 @@
+/*PAGE ACCUEIL*/
+/* Chargement de la page */
+
+.loading {
+    $colors: $couleur-primaire, $couleur-chargement-un, $couleur-secondaire, $couleur-chargement-deux, $couleur-tertiaire;
+    display: flex;
+    align-items: center;
+    height: 570px;
+    margin-bottom: 1000px;
+    animation: stoploader 0.5s linear 2s both;
+    .dot {
+        position: relative;
+        width: 2em;
+        height: 2em;
+        margin: 0.8em;
+        border-radius: 50%;
+        animation: stoploader 0.5s linear 2s both;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        border-radius: inherit;
+        animation: wave 2s ease-out infinite;
+      }
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          background: nth($colors, $i);
+  
+          &::before {
+            animation-delay: $i * 0.2s;
+          }
+        }
+      }
+    }
+  }
+  
+  
+
+
+/* Section sous le header avant les restaurants */
+.utilisateur--localisation {
+    @include flex_center();
+    background-color: $gris-clair;
+    padding-top: $espacement_moyen;
+    padding-bottom: $espacement_moyen;
+    box-shadow: 0 -5px 3px darken($gris-clair, 10%);
+    .fa-map-marker-alt {
+        margin-right: 20px;
+    }
+}
+
+.bloc_sous_header {
+    background-color: darken($blanc, 3%);
+    padding-top: 1px;
+    padding-bottom: 40px;
+    .Description_application {
+        @include font-text($textefin);
+        text-align : center;
+        padding-bottom: $espacement_moyen;
+        h2 {
+            @include font-text();
+            @include marges-auto();
+            width : 80% ;
+        }
+    }
+}
+
+/* deuxième div */
+
+.Application--fonctionnement {
+    margin-bottom: 70px;
+}
+
+.Fonctionnement--details {
+    @include flex_center(center);
+    background-color: darken($blanc, 3%);
+    box-shadow: 0 4px 4px darken($blanc, 10%);
+    border-radius: 30px;
+    margin-bottom: $espacement_moyen;
+    height: 80px;
+    .details_nombres {
+        @include flex_center();
+        position: relative;
+        left: -5px;
+        background-color: $couleur-primaire;
+        color: $blanc;
+        width: $espacement_moyen;
+        height: $espacement_moyen;
+        align-items: center;
+        border-radius: 10px;
+        font-size: small;
+    }
+    .fas {
+        @include marges-auto(25px);
+        color: $couleur-primaire;
+    }
+    .details_phrases {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    &:hover {
+        background-color: lighten($couleur-primaire, 36%);
+        box-shadow: 0 5px 3px darken($blanc, 15%);
+    }
+}
+
+/* liste des restaurants*/
+
+.Liste_restaurants {
+    background-color: darken($blanc, 3%);
+    padding-bottom: 100px;
+    padding-top: 40px;
+    h2 {
+        @include marges-auto($espacement_moyen); /* attention cela impacte aussi les h2 sous les photos, voir commentaire vide 20 lignes plus bas */
+    }
+    .restaurants {
+        min-width: 300px;
+        background-color: $blanc;
+        border-radius: $espacement_moyen;
+        box-shadow: 0 4px 4px darken($blanc, 10%);
+        color:$noir;
+        margin-bottom: $espacement_moyen;
+        overflow: hidden;
+        &:hover a img {
+            transform:scale(1.25);
+            transform-origin: bottom;
+            transition: all 0.4s;
+        }
+        .restaurant--picture {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            transition: all 0.4s;
+            transform-origin: bottom;
+        }
+        h2 { /************/
+            font-size:1.2em;
+            margin-bottom: $espacement_petit;
+        }
+        .restaurant_localisation {
+            @include font-text($textefin);
+            @include marges-auto($espacement_moyen);
+        }
+        .fa-heart {
+            width:20px;
+            margin-left: 274px;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            left: -20px;
+            top: -30px;
+            color: grey;
+            transition: transform 400ms, color 400ms;
+            &:hover + .coeur {
+                transform: scale(1);
+            }
+            &:hover {
+                color:$couleur-primaire;
+            }
+        }
+        .coeur {
+            width:20px;
+            margin-left: 274px;
+            position: relative;
+            left: -20px;
+            top: -45px;
+            transform-origin: 10px 5px;
+            transform: scale(0);
+            background: -webkit-linear-gradient(top right, $couleur-primaire, $couleur-secondaire);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            &:hover {
+                transform: scale(1);
+            }
+        }
+    }
+}

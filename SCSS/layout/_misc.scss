@@ -1,0 +1,33 @@
+/* Règle générale à toute les pages */
+body {
+    margin : 0;
+    @include font-text();
+}
+
+.max-width-container {
+    @include marges-auto();
+    max-width: 300px;
+}
+
+button {
+    @include flex_center(center);
+    border-radius: 20px;
+    cursor: pointer;
+    border: 0 $blanc solid;
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(to top left, $couleur-primaire, $couleur-secondaire);
+    color: $blanc;
+    box-shadow: 0 4px 4px darken($gris-clair, 10%);
+    &:hover {
+        background: linear-gradient(to top left,lighten($couleur-primaire, 2%), lighten($couleur-secondaire, 5%));
+        box-shadow: 0 5px 3px darken($blanc, 15%);
+    }
+}
+
+/*Tous les liens*/
+a {
+    text-decoration: none;
+    color:$noir;
+    cursor: pointer;
+}

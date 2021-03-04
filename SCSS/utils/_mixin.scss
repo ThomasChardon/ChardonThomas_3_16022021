@@ -1,0 +1,33 @@
+/* Les mixin */
+@mixin font-logo()
+{
+    font-family: 'Shrikhand';
+}
+
+@mixin font-text($taille : $taille-regular)
+{
+    font-family: $taille;
+}
+
+@mixin marges-auto($specification : auto)
+{
+    margin-right: $specification;
+    margin-left: $specification;
+}
+
+@mixin flex_center($align-center : initial) /*Celle ci permet d'aligner automatiquement sur l'axe horizontal, avec vertical en option*/
+{
+    display: flex;
+    justify-content: center;
+    align-items: $align-center;
+}
+
+@mixin boucle-apparition () {
+    @for $i from 1 through 50 {
+        &:nth-child(#{$i}) {
+            animation: apparition 1000ms #{$i * .2}s;
+            animation-fill-mode: both;
+            animation-timing-function: linear;
+        }
+    }
+}
