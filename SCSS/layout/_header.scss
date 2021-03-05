@@ -19,5 +19,8 @@ header {
         @include marges-auto();
         margin-bottom: $espacement_petit;
         margin-top: $espacement_petit;
+        @media screen and (min-width: 1200px) and (max-width: 2000px) {
+            font-size: 3em;
+        } 
     }
 }

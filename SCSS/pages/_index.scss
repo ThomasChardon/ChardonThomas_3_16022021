@@ -8,6 +8,13 @@
     height: 570px;
     margin-bottom: 1000px;
     animation: stoploader 0.5s linear 2s both;
+    @media screen and (min-width: 768px) and (max-width: 2000px) {
+        margin-right:auto;
+        margin-left:auto;
+        height: 1000px;
+        width: 300px;
+        justify-content: center;
+    } 
     .dot {
         position: relative;
         width: 2em;
@@ -46,6 +53,9 @@
     padding-top: $espacement_moyen;
     padding-bottom: $espacement_moyen;
     box-shadow: 0 -5px 3px darken($gris-clair, 10%);
+    @media screen and (min-width: 1200px) and (max-width: 2000px) {
+        font-size: 1.5em;
+    } 
     .fa-map-marker-alt {
         margin-right: 20px;
     }
@@ -59,6 +69,9 @@
         @include font-text($textefin);
         text-align : center;
         padding-bottom: $espacement_moyen;
+        @media screen and (min-width: 1200px) and (max-width: 2000px) {
+            font-size: 1.5em;
+        } 
         h2 {
             @include font-text();
             @include marges-auto();
@@ -85,6 +98,7 @@
             width: 100%;
             height: 30px;
             @include flex_center();
+            font-size: 2em;
         }
     }
 }
@@ -123,6 +137,7 @@
         }
         @media screen and (min-width: 768px) and (max-width: 2000px) {
             margin-left: auto;
+            font-size: 1.4em;
         }
     }
     &:hover {
@@ -158,6 +173,7 @@
             position: inherit;
             @include marges-auto();
             margin-bottom: 50px;
+            font-size: 2em;
         }
     }
     .restaurants {

@@ -25,6 +25,12 @@ button {
     background: linear-gradient(to top left, $couleur-primaire, $couleur-secondaire);
     color: $blanc;
     box-shadow: 0 4px 4px darken($gris-clair, 10%);
+    @media screen and (min-width: 768px) and (max-width: 2000px) {
+        width: 300px;
+        height: 60px;
+        border-radius: 30px;
+        font-size: 1.3em;
+    } 
     &:hover {
         background: linear-gradient(to top left,lighten($couleur-primaire, 2%), lighten($couleur-secondaire, 5%));
         box-shadow: 0 5px 3px darken($blanc, 15%);
