@@ -16,31 +16,33 @@ ca indique de lancer sass, se baser sur le fichier style scss, générer le fich
 
 
 /*
-Questions à poser
+1. Avancées de l'étudiant sur son projet depuis la dernière session :
 
-loeader : comment ça marche pour le superposer sur la page puis le faire disparaitre et ce sans JS ?
+Thomas a terminé le P3, le passage en soutenance va pouvoir se faire
 
-*/
-
-/*
-TO DO list
-
-3 Faire les media queries (voir exemple footer)
-
-5 préparer la soutenance (en dernier objectif si tout est terminé au dessus)
-
-CHECK
-
-1 Faire les animations 
-
-2 passer au W3C, tester sur firefox
-
-4 créer chaque restaurant
+2. Objectifs "SMART" fixés par l'étudiant et le mentor pour la prochaine session :
 
 
-Finir la version responsive
+Peaufiner le P3 avant passage en soutenance :
+Corriger les retours de la revue de code
+Clear les commentaires dans les fichiers scss
+Aucune erreur ou warning au W3C
+Github : merge sur master puis changement github pages
+Préparer la soutenance
+Mettre les livrables sur OC
 
-Objectifs secondaires :
-version tablette / desktop : voir les réarrengements
+P4:
+Commencer à lire la mission et les specs
+Commencer les cours associés au projet
+3. Principaux sujets abordés pendant la session, obstacle à surmonter (le cas échéant), et actions nécessaires pour atteindre ces objectifs :
+
+Revue de code du P3 :
+
+position fixed spinner
+passer W3C
+utiliser des variables pour les media
+Optimisation css : organisation par importance : https://webdesign.tutsplus.com/articles/outside-in-ordering-css-properties-by-importance--cms-21685
+
+Nous avons aussi parlé productivité avec les snippets sur VSCode (command pallet → snippets → condigure global snippets)
 
 */

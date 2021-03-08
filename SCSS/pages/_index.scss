@@ -5,16 +5,16 @@
     $colors: $couleur-primaire, $couleur-chargement-un, $couleur-secondaire, $couleur-chargement-deux, $couleur-tertiaire;
     display: flex;
     align-items: center;
-    height: 570px;
+    height: 100%;
     margin-bottom: 1000px;
+    position: fixed;
+    background-color: $blanc;
+    width: 100%;
+    margin-right:auto;
+    margin-left:auto;
+    justify-content: center;
+    z-index: 20;
     animation: stoploader 0.5s linear 2s both;
-    @media screen and (min-width: 768px) and (max-width: 2000px) {
-        margin-right:auto;
-        margin-left:auto;
-        height: 1000px;
-        width: 300px;
-        justify-content: center;
-    } 
     .dot {
         position: relative;
         width: 2em;
@@ -53,7 +53,7 @@
     padding-top: $espacement_moyen;
     padding-bottom: $espacement_moyen;
     box-shadow: 0 -5px 3px darken($gris-clair, 10%);
-    @media screen and (min-width: 1200px) and (max-width: 2000px) {
+    @media screen and (min-width: 1200px) {
         font-size: 1.5em;
     } 
     .fa-map-marker-alt {
@@ -69,7 +69,7 @@
         @include font-text($textefin);
         text-align : center;
         padding-bottom: $espacement_moyen;
-        @media screen and (min-width: 1200px) and (max-width: 2000px) {
+        @media screen and (min-width: 1200px) {
             font-size: 1.5em;
         } 
         h2 {
@@ -84,17 +84,18 @@
 
 .Application--fonctionnement {
     margin-bottom: 70px;
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        width: 400px;
+    @media screen and (min-width: 768px) and (max-width: 1199px)  {
+        width: 500px;
     } 
-    @media screen and (min-width: 1200px) and (max-width: 2000px) {
+    @media screen and (min-width: 1200px){
+        width: 100%;
         display: flex;
         justify-content: space-between;
         height: 150px;
         flex-wrap: wrap;
     }
     h2 {
-        @media screen and (min-width: 768px) and (max-width: 2000px) {
+        @media screen and (min-width: 768px) {
             width: 100%;
             height: 30px;
             @include flex_center();
@@ -110,8 +111,11 @@
     border-radius: 30px;
     margin-bottom: $espacement_moyen;
     height: 80px;
-    @media screen and (min-width: 1200px) and (max-width: 2000px) {
-        width: 31%;
+    @media screen and (min-width: 1200px) {
+        width: 32%;
+    } 
+    @media screen and (min-width: 1600px) {
+        width: 30%;
     } 
     .details_nombres {
         @include flex_center();
@@ -135,7 +139,7 @@
         @media screen and (min-width: 768px) and (max-width: 1199px) {
             margin-left: 50px;
         }
-        @media screen and (min-width: 768px) and (max-width: 2000px) {
+        @media screen and (min-width: 768px) and (max-width: 5000px) {
             margin-left: auto;
             font-size: 1.4em;
         }
@@ -152,22 +156,16 @@
     background-color: darken($blanc, 3%);
     padding-bottom: 100px;
     padding-top: 40px;
-    @media screen and (min-width: 768px) and (max-width: 2000px) {
+    @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
     }
-    // @media screen and (min-width: 768px) and (max-width: 1199px) {
-    //     display: flex;
-    //     flex-wrap: wrap;
-    // }
     > h2 {
         width: 150px;
-        // margin-left: (auto + 20px);
         @include marges-auto();
         position: relative;
         left:-75px;
-        @media screen and (min-width: 768px) and (max-width: 2000px) {
-            // width: 100%;
+        @media screen and (min-width: 768px) {
             padding-left:40%;
             padding-right:40%;
             position: inherit;
@@ -185,18 +183,18 @@
         color:$noir;
         margin-bottom: $espacement_moyen;
         overflow: hidden;
-        @media screen and (min-width: 768px) and (max-width: 1000px) {
+        @media screen and (min-width: 768px) {
             width:370px;
             display: flex;
             margin-bottom: 40px;
         }
-        @media screen and (min-width: 1000px) and (max-width: 1199px) {
+        @media screen and (min-width: 1000px) {
             width:420px;
             height: 260px;
             display: flex;
             margin-bottom: 50px;
         }
-        @media screen and (min-width: 1200px) and (max-width: 1400px) {
+        @media screen and (min-width: 1200px) {
             min-width: 280px;
             width:18%;
             height: 300px;
@@ -204,7 +202,7 @@
             justify-content: space-between;
             margin-bottom: 50px;
         }
-        @media screen and (min-width: 1400px) and (max-width: 2000px) {
+        @media screen and (min-width: 1400px) {
             width:22%;
             height: 300px;
             display: flex;
@@ -223,13 +221,13 @@
             border-top-right-radius: 20px;
             transition: all 0.4s;
             transform-origin: bottom;
-            @media screen and (min-width: 1000px) and (max-width: 1199px) {
+            @media screen and (min-width: 1000px) {
                 height: 175px;
             }
-            @media screen and (min-width: 1200px) and (max-width: 1400px) {
+            @media screen and (min-width: 1200px) {
                 height: 190px;
             }
-            @media screen and (min-width: 1400px) and (max-width: 2000px) {
+            @media screen and (min-width: 1400px) {
                 height: 200px;
             }
         }
@@ -245,7 +243,7 @@
         .fa-heart {
             width:20px;
             height: 20px;
-            margin-left: 85%;
+            margin-left: 90%;
             @include flex_center();
             align-items: center;
             position: relative;
@@ -263,7 +261,7 @@
             }
         }
         .coeur {
-            margin-left: 85%;
+            margin-left: 90%;
             position: relative;
             left: -20px;
             top: -50px;

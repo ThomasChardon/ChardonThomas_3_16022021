@@ -108,7 +108,7 @@ header {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-@media screen and (min-width: 1200px) and (max-width: 2000px) {
+@media screen and (min-width: 1200px) {
   .Titre h1 {
     font-size: 3em;
   }
@@ -128,14 +128,14 @@ footer {
 footer .titre_footer {
   font-size: 1em;
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   footer .titre_footer {
     font-size: 1.5em;
     display: flex;
     justify-content: center;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 2000px) {
+@media screen and (min-width: 1200px) {
   footer .titre_footer {
     font-size: 2em;
     display: flex;
@@ -149,7 +149,7 @@ footer .infos_footer ul {
   list-style-type: none;
   padding-left: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1000px) {
+@media screen and (min-width: 768px) {
   footer .infos_footer ul {
     display: flex;
     justify-content: space-between;
@@ -157,7 +157,7 @@ footer .infos_footer ul {
     margin-left: 5%;
   }
 }
-@media screen and (min-width: 1000px) and (max-width: 1500px) {
+@media screen and (min-width: 1000px) {
   footer .infos_footer ul {
     display: flex;
     justify-content: space-between;
@@ -165,7 +165,7 @@ footer .infos_footer ul {
     margin-left: 10%;
   }
 }
-@media screen and (min-width: 1500px) and (max-width: 2000px) {
+@media screen and (min-width: 1500px) {
   footer .infos_footer ul {
     display: flex;
     justify-content: space-between;
@@ -198,14 +198,24 @@ body {
   margin-left: auto;
   max-width: 300px;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .max-width-container {
     max-width: 700px;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 2000px) {
+@media screen and (min-width: 1200px) {
   .max-width-container {
-    max-width: 90%;
+    max-width: 1100px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .max-width-container {
+    max-width: 1500px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .max-width-container {
+    max-width: 1800px;
   }
 }
 
@@ -222,7 +232,7 @@ button {
   color: #fff;
   box-shadow: 0 4px 4px #d1d1d1;
 }
-@media screen and (min-width: 768px) and (max-width: 2000px) {
+@media screen and (min-width: 768px) {
   button {
     width: 300px;
     height: 60px;
@@ -247,18 +257,16 @@ a {
 .loading {
   display: flex;
   align-items: center;
-  height: 570px;
+  height: 100%;
   margin-bottom: 1000px;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  z-index: 20;
   animation: stoploader 0.5s linear 2s both;
-}
-@media screen and (min-width: 768px) and (max-width: 2000px) {
-  .loading {
-    margin-right: auto;
-    margin-left: auto;
-    height: 1000px;
-    width: 300px;
-    justify-content: center;
-  }
 }
 .loading .dot {
   position: relative;
@@ -318,7 +326,7 @@ a {
   padding-bottom: 20px;
   box-shadow: 0 -5px 3px #d1d1d1;
 }
-@media screen and (min-width: 1200px) and (max-width: 2000px) {
+@media screen and (min-width: 1200px) {
   .utilisateur--localisation {
     font-size: 1.5em;
   }
@@ -337,7 +345,7 @@ a {
   text-align: center;
   padding-bottom: 20px;
 }
-@media screen and (min-width: 1200px) and (max-width: 2000px) {
+@media screen and (min-width: 1200px) {
   .bloc_sous_header .Description_application {
     font-size: 1.5em;
   }
@@ -355,18 +363,19 @@ a {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .Application--fonctionnement {
-    width: 400px;
+    width: 500px;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 2000px) {
+@media screen and (min-width: 1200px) {
   .Application--fonctionnement {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     height: 150px;
     flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 2000px) {
+@media screen and (min-width: 768px) {
   .Application--fonctionnement h2 {
     width: 100%;
     height: 30px;
@@ -387,9 +396,14 @@ a {
   margin-bottom: 20px;
   height: 80px;
 }
-@media screen and (min-width: 1200px) and (max-width: 2000px) {
+@media screen and (min-width: 1200px) {
   .Fonctionnement--details {
-    width: 31%;
+    width: 32%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .Fonctionnement--details {
+    width: 30%;
   }
 }
 .Fonctionnement--details .details_nombres {
@@ -420,7 +434,7 @@ a {
     margin-left: 50px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 2000px) {
+@media screen and (min-width: 768px) and (max-width: 5000px) {
   .Fonctionnement--details .details_phrases {
     margin-left: auto;
     font-size: 1.4em;
@@ -437,7 +451,7 @@ a {
   padding-bottom: 100px;
   padding-top: 40px;
 }
-@media screen and (min-width: 768px) and (max-width: 2000px) {
+@media screen and (min-width: 768px) {
   .Liste_restaurants {
     display: flex;
     flex-wrap: wrap;
@@ -450,7 +464,7 @@ a {
   position: relative;
   left: -75px;
 }
-@media screen and (min-width: 768px) and (max-width: 2000px) {
+@media screen and (min-width: 768px) {
   .Liste_restaurants > h2 {
     padding-left: 40%;
     padding-right: 40%;
@@ -471,14 +485,14 @@ a {
   margin-bottom: 20px;
   overflow: hidden;
 }
-@media screen and (min-width: 768px) and (max-width: 1000px) {
+@media screen and (min-width: 768px) {
   .Liste_restaurants .restaurants {
     width: 370px;
     display: flex;
     margin-bottom: 40px;
   }
 }
-@media screen and (min-width: 1000px) and (max-width: 1199px) {
+@media screen and (min-width: 1000px) {
   .Liste_restaurants .restaurants {
     width: 420px;
     height: 260px;
@@ -486,7 +500,7 @@ a {
     margin-bottom: 50px;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
+@media screen and (min-width: 1200px) {
   .Liste_restaurants .restaurants {
     min-width: 280px;
     width: 18%;
@@ -496,7 +510,7 @@ a {
     margin-bottom: 50px;
   }
 }
-@media screen and (min-width: 1400px) and (max-width: 2000px) {
+@media screen and (min-width: 1400px) {
   .Liste_restaurants .restaurants {
     width: 22%;
     height: 300px;
@@ -518,17 +532,17 @@ a {
   transition: all 0.4s;
   transform-origin: bottom;
 }
-@media screen and (min-width: 1000px) and (max-width: 1199px) {
+@media screen and (min-width: 1000px) {
   .Liste_restaurants .restaurants .restaurant--picture {
     height: 175px;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
+@media screen and (min-width: 1200px) {
   .Liste_restaurants .restaurants .restaurant--picture {
     height: 190px;
   }
 }
-@media screen and (min-width: 1400px) and (max-width: 2000px) {
+@media screen and (min-width: 1400px) {
   .Liste_restaurants .restaurants .restaurant--picture {
     height: 200px;
   }
@@ -547,7 +561,7 @@ a {
 .Liste_restaurants .restaurants .fa-heart {
   width: 20px;
   height: 20px;
-  margin-left: 85%;
+  margin-left: 90%;
   display: flex;
   justify-content: center;
   align-items: initial;
@@ -567,7 +581,7 @@ a {
   -webkit-text-fill-color: transparent;
 }
 .Liste_restaurants .restaurants .coeur {
-  margin-left: 85%;
+  margin-left: 90%;
   position: relative;
   left: -20px;
   top: -50px;
@@ -603,7 +617,7 @@ a {
   margin-left: 20px;
   font-family: "Shrikhand";
 }
-@media screen and (min-width: 768px) and (max-width: 2000px) {
+@media screen and (min-width: 768px) {
   .Menu_du_restaurant h1 {
     margin-left: 5%;
   }
@@ -615,13 +629,13 @@ a {
   margin-right: 10px;
 }
 
-@media screen and (min-width: 1200px) and (max-width: 2000px) {
+@media screen and (min-width: 1200px) {
   .section_des_menus {
     display: flex;
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 2000px) {
+@media screen and (min-width: 1200px) {
   .section_des_menus .bloc_menus {
     width: 30%;
     display: flex;
@@ -902,7 +916,7 @@ a {
   border-radius: 20px;
   cursor: pointer;
 }
-@media screen and (min-width: 1200px) and (max-width: 2000px) {
+@media screen and (min-width: 1200px) {
   .section_des_menus .bloc_menus .menu_plats {
     width: 100%;
   }
@@ -974,31 +988,34 @@ a {
 }
 
 /*
-Questions à poser
+1. Avancées de l'étudiant sur son projet depuis la dernière session :
 
-loeader : comment ça marche pour le superposer sur la page puis le faire disparaitre et ce sans JS ?
+Thomas a terminé le P3, le passage en soutenance va pouvoir se faire
 
-*/
-/*
-TO DO list
-
-3 Faire les media queries (voir exemple footer)
-
-5 préparer la soutenance (en dernier objectif si tout est terminé au dessus)
-
-CHECK
-
-1 Faire les animations 
-
-2 passer au W3C, tester sur firefox
-
-4 créer chaque restaurant
+2. Objectifs "SMART" fixés par l'étudiant et le mentor pour la prochaine session :
 
 
-Finir la version responsive
+Peaufiner le P3 avant passage en soutenance :
+Corriger les retours de la revue de code
+Clear les commentaires dans les fichiers scss
+Aucune erreur ou warning au W3C
+Github : merge sur master puis changement github pages
+Préparer la soutenance
+Mettre les livrables sur OC
 
-Objectifs secondaires :
-version tablette / desktop : voir les réarrengements
+P4:
+Commencer à lire la mission et les specs
+Commencer les cours associés au projet
+3. Principaux sujets abordés pendant la session, obstacle à surmonter (le cas échéant), et actions nécessaires pour atteindre ces objectifs :
+
+Revue de code du P3 :
+
+position fixed spinner
+passer W3C
+utiliser des variables pour les media
+Optimisation css : organisation par importance : https://webdesign.tutsplus.com/articles/outside-in-ordering-css-properties-by-importance--cms-21685
+
+Nous avons aussi parlé productivité avec les snippets sur VSCode (command pallet → snippets → condigure global snippets)
 
 */
 
