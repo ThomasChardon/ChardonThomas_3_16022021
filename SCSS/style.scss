@@ -1,8 +1,3 @@
-/*dans le terminal, lancer
-./dart-sass/sass SCSS/style.scss CSS/style.css --watch
-ca indique de lancer sass, se baser sur le fichier style scss, générer le fichier style css, et mettre a jour a chaque sauvegarde
-*/
-
 @import "./utils/variables";
 @import "./utils/fonts";
 @import "./utils/mixin";
@@ -13,36 +8,3 @@ ca indique de lancer sass, se baser sur le fichier style scss, générer le fich
 @import "./pages/index";
 @import "./pages/menu";
 
-
-
-/*
-1. Avancées de l'étudiant sur son projet depuis la dernière session :
-
-Thomas a terminé le P3, le passage en soutenance va pouvoir se faire
-
-2. Objectifs "SMART" fixés par l'étudiant et le mentor pour la prochaine session :
-
-
-Peaufiner le P3 avant passage en soutenance :
-Corriger les retours de la revue de code
-Clear les commentaires dans les fichiers scss
-Aucune erreur ou warning au W3C
-Github : merge sur master puis changement github pages
-Préparer la soutenance
-Mettre les livrables sur OC
-
-P4:
-Commencer à lire la mission et les specs
-Commencer les cours associés au projet
-3. Principaux sujets abordés pendant la session, obstacle à surmonter (le cas échéant), et actions nécessaires pour atteindre ces objectifs :
-
-Revue de code du P3 :
-
-position fixed spinner
-passer W3C
-utiliser des variables pour les media
-Optimisation css : organisation par importance : https://webdesign.tutsplus.com/articles/outside-in-ordering-css-properties-by-importance--cms-21685
-
-Nous avons aussi parlé productivité avec les snippets sur VSCode (command pallet → snippets → condigure global snippets)
-
-*/
