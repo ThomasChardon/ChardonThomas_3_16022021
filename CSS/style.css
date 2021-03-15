@@ -448,12 +448,20 @@ a {
   padding-top: 40px;
 }
 @media screen and (min-width: 768px) {
-  .Liste_restaurants {
+  .Liste_restaurants .liste_restaurants_suite {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
-.Liste_restaurants > h2 {
+@media screen and (min-width: 1200px) {
+  .Liste_restaurants .liste_restaurants_suite {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.Liste_restaurants .liste_restaurants_suite > h2 {
   width: 150px;
   margin-right: auto;
   margin-left: auto;
@@ -461,7 +469,7 @@ a {
   left: -75px;
 }
 @media screen and (min-width: 768px) {
-  .Liste_restaurants > h2 {
+  .Liste_restaurants .liste_restaurants_suite > h2 {
     padding-left: 40%;
     padding-right: 40%;
     position: inherit;
@@ -471,7 +479,7 @@ a {
     font-size: 2em;
   }
 }
-.Liste_restaurants .restaurants {
+.Liste_restaurants .liste_restaurants_suite .restaurants {
   min-width: 300px;
   height: 240px;
   background-color: #fff;
@@ -482,14 +490,14 @@ a {
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
-  .Liste_restaurants .restaurants {
+  .Liste_restaurants .liste_restaurants_suite .restaurants {
     width: 370px;
     display: flex;
     margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 1000px) {
-  .Liste_restaurants .restaurants {
+  .Liste_restaurants .liste_restaurants_suite .restaurants {
     width: 420px;
     height: 260px;
     display: flex;
@@ -497,9 +505,9 @@ a {
   }
 }
 @media screen and (min-width: 1200px) {
-  .Liste_restaurants .restaurants {
+  .Liste_restaurants .liste_restaurants_suite .restaurants {
     min-width: 280px;
-    width: 18%;
+    width: 40%;
     height: 300px;
     display: flex;
     justify-content: space-between;
@@ -507,19 +515,37 @@ a {
   }
 }
 @media screen and (min-width: 1400px) {
-  .Liste_restaurants .restaurants {
-    width: 22%;
+  .Liste_restaurants .liste_restaurants_suite .restaurants {
+    width: 40%;
     height: 300px;
     display: flex;
     margin-bottom: 50px;
   }
 }
-.Liste_restaurants .restaurants:hover a img {
+@media screen and (min-width: 1600px) {
+  .Liste_restaurants .liste_restaurants_suite .restaurants {
+    max-width: 350px;
+    width: 25%;
+    height: 300px;
+    display: flex;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .Liste_restaurants .liste_restaurants_suite .restaurants {
+    max-width: 400px;
+    width: 25%;
+    height: 300px;
+    display: flex;
+    margin-bottom: 50px;
+  }
+}
+.Liste_restaurants .liste_restaurants_suite .restaurants:hover a img {
   transform: scale(1.25);
   transform-origin: bottom;
   transition: all 0.4s;
 }
-.Liste_restaurants .restaurants .restaurant--picture {
+.Liste_restaurants .liste_restaurants_suite .restaurants .restaurant--picture {
   width: 100%;
   height: 150px;
   object-fit: cover;
@@ -529,32 +555,32 @@ a {
   transform-origin: bottom;
 }
 @media screen and (min-width: 1000px) {
-  .Liste_restaurants .restaurants .restaurant--picture {
+  .Liste_restaurants .liste_restaurants_suite .restaurants .restaurant--picture {
     height: 175px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .Liste_restaurants .restaurants .restaurant--picture {
+  .Liste_restaurants .liste_restaurants_suite .restaurants .restaurant--picture {
     height: 190px;
   }
 }
 @media screen and (min-width: 1400px) {
-  .Liste_restaurants .restaurants .restaurant--picture {
+  .Liste_restaurants .liste_restaurants_suite .restaurants .restaurant--picture {
     height: 200px;
   }
 }
-.Liste_restaurants .restaurants h2 {
+.Liste_restaurants .liste_restaurants_suite .restaurants h2 {
   margin-right: 20px;
   margin-left: 20px;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
-.Liste_restaurants .restaurants .restaurant_localisation {
+.Liste_restaurants .liste_restaurants_suite .restaurants .restaurant_localisation {
   font-family: "RobotoLight";
   margin-right: 20px;
   margin-left: 20px;
 }
-.Liste_restaurants .restaurants .fa-heart {
+.Liste_restaurants .liste_restaurants_suite .restaurants .fa-heart {
   width: 20px;
   height: 20px;
   margin-left: 90%;
@@ -568,15 +594,15 @@ a {
   color: grey;
   transition: transform 400ms, color 400ms;
 }
-.Liste_restaurants .restaurants .fa-heart:hover + .coeur {
+.Liste_restaurants .liste_restaurants_suite .restaurants .fa-heart:hover + .coeur {
   transform: scale(1);
 }
-.Liste_restaurants .restaurants .fa-heart:hover {
+.Liste_restaurants .liste_restaurants_suite .restaurants .fa-heart:hover {
   background: -webkit-linear-gradient(top right, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.Liste_restaurants .restaurants .coeur {
+.Liste_restaurants .liste_restaurants_suite .restaurants .coeur {
   margin-left: 90%;
   position: relative;
   left: -20px;
@@ -587,7 +613,7 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.Liste_restaurants .restaurants .coeur:hover {
+.Liste_restaurants .liste_restaurants_suite .restaurants .coeur:hover {
   transform: scale(1);
 }
 
@@ -613,16 +639,15 @@ a {
   margin-left: 20px;
   font-family: "Shrikhand";
 }
-@media screen and (min-width: 768px) {
-  .Menu_du_restaurant h1 {
-    margin-left: 5%;
-  }
-}
 .Menu_du_restaurant h1, .Menu_du_restaurant .fa-heart {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-right: 10px;
+  margin: auto;
+}
+.Menu_du_restaurant .fa-heart {
+  margin-right: 0;
 }
 
 @media screen and (min-width: 1200px) {

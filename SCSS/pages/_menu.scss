@@ -19,15 +19,17 @@
         padding-top: $espacement_moyen;
         margin-left: $espacement_moyen;
         @include font-logo();
-        @media screen and (min-width: 768px) {
-            margin-left: 5%;
-        }
+        
     }
     h1, .fa-heart {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-right: $espacement_petit;
+        margin:auto;
+    }
+    .fa-heart {
+        margin-right: 0;
     }
 }
 
