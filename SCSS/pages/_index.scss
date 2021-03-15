@@ -224,6 +224,9 @@
                 display: flex;
                 margin-bottom: 50px;
             }
+            a {
+                width: 100%;
+            }
             &:hover a img {
                 transform:scale(1.25);
                 transform-origin: bottom;

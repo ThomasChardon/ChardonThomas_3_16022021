@@ -540,6 +540,9 @@ a {
     margin-bottom: 50px;
   }
 }
+.Liste_restaurants .liste_restaurants_suite .restaurants a {
+  width: 100%;
+}
 .Liste_restaurants .liste_restaurants_suite .restaurants:hover a img {
   transform: scale(1.25);
   transform-origin: bottom;
